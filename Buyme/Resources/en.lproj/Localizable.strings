@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Buyme
+
+  Created by Vinh LD on 2/13/20.
+  Copyright © 2020 Vinh LD. All rights reserved.
+*/
+
+// MARK: Search
+"Search" = "Search";
+"Products for you" = "Products for you";
+"Shop" = "Shop";
+"Sold" = "Sold";
+"Top Search" = "Top Search";
+"Categories" = "Categories";

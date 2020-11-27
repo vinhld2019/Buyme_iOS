@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShopForYouCollectionViewCell" customModule="Buyme" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="193" height="209"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="193" height="209"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KN-zL-Aft">
+                        <rect key="frame" x="0.0" y="0.0" width="193" height="209"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TranThanh" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-hF-llO">
+                                <rect key="frame" x="66.5" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Zhy-EO-KZf"/>
+                                    <constraint firstAttribute="height" constant="60" id="d9a-8x-g0i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Huỳnh Trấn Thành" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB3-ar-wKm" customClass="Label" customModule="Buyme" customModuleProvider="target">
+                                <rect key="frame" x="5" y="75" width="183" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="qm2-OU-vrp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.73725490199999999" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mỹ phẩm Hàn Quốc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-jL-Q59" customClass="Label" customModule="Buyme" customModuleProvider="target">
+                                <rect key="frame" x="5" y="98" width="183" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g0C-jL-Q59" firstAttribute="leading" secondItem="3KN-zL-Aft" secondAttribute="leading" constant="5" id="06i-Hd-XcS"/>
+                            <constraint firstAttribute="trailing" secondItem="qB3-ar-wKm" secondAttribute="trailing" constant="5" id="5eQ-ET-fiB"/>
+                            <constraint firstItem="pJK-hF-llO" firstAttribute="centerX" secondItem="3KN-zL-Aft" secondAttribute="centerX" id="DaD-Yz-g0M"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="g0C-jL-Q59" secondAttribute="bottom" constant="5" id="GPK-oo-Nkc"/>
+                            <constraint firstItem="qB3-ar-wKm" firstAttribute="top" secondItem="pJK-hF-llO" secondAttribute="bottom" constant="5" id="RJc-7f-NIP"/>
+                            <constraint firstAttribute="trailing" secondItem="g0C-jL-Q59" secondAttribute="trailing" constant="5" id="TAz-I2-X4F"/>
+                            <constraint firstItem="pJK-hF-llO" firstAttribute="top" secondItem="3KN-zL-Aft" secondAttribute="top" constant="10" id="YML-ee-FRh"/>
+                            <constraint firstItem="g0C-jL-Q59" firstAttribute="top" secondItem="qB3-ar-wKm" secondAttribute="bottom" constant="3" id="ara-xr-UiA"/>
+                            <constraint firstItem="qB3-ar-wKm" firstAttribute="leading" secondItem="3KN-zL-Aft" secondAttribute="leading" constant="5" id="dXV-gi-Be5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3KN-zL-Aft" secondAttribute="trailing" id="Cmq-XV-eaL"/>
+                <constraint firstItem="3KN-zL-Aft" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VTD-rY-8Qa"/>
+                <constraint firstItem="3KN-zL-Aft" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ayb-Jy-J3K"/>
+                <constraint firstAttribute="bottom" secondItem="3KN-zL-Aft" secondAttribute="bottom" id="u8g-Lj-YIX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="193" height="209"/>
+            <connections>
+                <outlet property="view" destination="3KN-zL-Aft" id="e9B-ng-9uO"/>
+            </connections>
+            <point key="canvasLocation" x="241.30434782608697" y="99.441964285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="TranThanh" width="433" height="433"/>
+    </resources>
+</document>

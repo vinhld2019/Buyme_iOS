@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Buyme
+
+  Created by Vinh LD on 8/20/20.
+  Copyright © 2020 Vinh LD. All rights reserved.
+*/
+"NSCameraUsageDescription" = "Application want to use your Camera!";

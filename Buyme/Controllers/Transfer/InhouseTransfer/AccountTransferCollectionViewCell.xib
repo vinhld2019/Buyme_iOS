@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MYRIADPRO-SEMIBOLD.OTF">
+            <string>MyriadPro-Semibold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>MyriadPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AccountTransferCollectionViewCell" customModule="EBanking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="367" height="82"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efb-rT-Paj">
+                        <rect key="frame" x="5" y="5" width="357" height="72"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-dG-yEP">
+                                <rect key="frame" x="0.0" y="0.0" width="357" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbX-oK-jAQ" userLabel="AccountType">
+                                        <rect key="frame" x="5" y="5" width="347" height="20"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="autolocalizationKey" value="Available Balance"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWi-tW-2ai" userLabel="STK">
+                                        <rect key="frame" x="5" y="25" width="31" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="wGF-cp-Ik5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="autolocalizationKey" value="Available Balance"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hH-u5-QMT">
+                                        <rect key="frame" x="326" y="25" width="26" height="20"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="autolocalizationKey" value="Available Balance"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hbX-oK-jAQ" firstAttribute="top" secondItem="Q96-dG-yEP" secondAttribute="top" constant="5" id="4cZ-TL-wXx"/>
+                                    <constraint firstAttribute="bottom" secondItem="AWi-tW-2ai" secondAttribute="bottom" constant="5" id="57G-fQ-DWF"/>
+                                    <constraint firstAttribute="trailing" secondItem="hbX-oK-jAQ" secondAttribute="trailing" constant="5" id="A1k-d5-GT2"/>
+                                    <constraint firstItem="4hH-u5-QMT" firstAttribute="top" secondItem="AWi-tW-2ai" secondAttribute="top" id="D07-np-Mml"/>
+                                    <constraint firstItem="AWi-tW-2ai" firstAttribute="top" secondItem="hbX-oK-jAQ" secondAttribute="bottom" id="Jar-b7-M06"/>
+                                    <constraint firstAttribute="trailing" secondItem="4hH-u5-QMT" secondAttribute="trailing" constant="5" id="PuD-1x-Ika"/>
+                                    <constraint firstItem="4hH-u5-QMT" firstAttribute="bottom" secondItem="AWi-tW-2ai" secondAttribute="bottom" id="Wgm-1A-1MC"/>
+                                    <constraint firstAttribute="height" constant="50" id="WyP-ru-W2i"/>
+                                    <constraint firstItem="hbX-oK-jAQ" firstAttribute="leading" secondItem="Q96-dG-yEP" secondAttribute="leading" constant="5" id="mXD-rX-nSQ"/>
+                                    <constraint firstItem="AWi-tW-2ai" firstAttribute="leading" secondItem="hbX-oK-jAQ" secondAttribute="leading" id="mpy-Mi-cqM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKL-6K-IiG">
+                                <rect key="frame" x="5" y="40" width="347" height="18"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="autolocalizationKey" value="Available Balance"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USU-9X-3Sn">
+                                <rect key="frame" x="5" y="61" width="347" height="16"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="autolocalizationKey" value="Available Balance"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fKL-6K-IiG" secondAttribute="trailing" constant="5" id="1JB-xS-PFK"/>
+                            <constraint firstItem="Q96-dG-yEP" firstAttribute="bottom" secondItem="fKL-6K-IiG" secondAttribute="top" constant="-5" id="53P-47-2LA"/>
+                            <constraint firstItem="Q96-dG-yEP" firstAttribute="leading" secondItem="efb-rT-Paj" secondAttribute="leading" id="6Kt-Tl-gb5"/>
+                            <constraint firstItem="USU-9X-3Sn" firstAttribute="top" secondItem="fKL-6K-IiG" secondAttribute="bottom" constant="3" id="AMv-to-XYu"/>
+                            <constraint firstItem="USU-9X-3Sn" firstAttribute="leading" secondItem="efb-rT-Paj" secondAttribute="leading" constant="5" id="BUL-Dk-R8D"/>
+                            <constraint firstAttribute="bottom" secondItem="USU-9X-3Sn" secondAttribute="bottom" constant="5" id="EIq-c1-CKs"/>
+                            <constraint firstItem="Q96-dG-yEP" firstAttribute="top" secondItem="efb-rT-Paj" secondAttribute="top" id="Ihy-Nk-i8L"/>
+                            <constraint firstAttribute="trailing" secondItem="USU-9X-3Sn" secondAttribute="trailing" constant="5" id="irj-ba-WED"/>
+                            <constraint firstItem="fKL-6K-IiG" firstAttribute="leading" secondItem="efb-rT-Paj" secondAttribute="leading" constant="5" id="u8m-1u-aZS"/>
+                            <constraint firstAttribute="trailing" secondItem="Q96-dG-yEP" secondAttribute="trailing" id="uYX-au-0Iv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="3" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="efb-rT-Paj" secondAttribute="bottom" constant="5" id="dEW-4G-TuZ"/>
+                <constraint firstItem="efb-rT-Paj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ea6-i7-Rdw"/>
+                <constraint firstItem="efb-rT-Paj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="u3C-j7-OOe"/>
+                <constraint firstAttribute="trailing" secondItem="efb-rT-Paj" secondAttribute="trailing" constant="5" id="ydc-o9-Yu9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="367" height="82"/>
+            <point key="canvasLocation" x="367.39130434782612" y="159.375"/>
+        </collectionViewCell>
+    </objects>
+</document>
