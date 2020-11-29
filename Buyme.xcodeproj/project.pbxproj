@@ -89,6 +89,10 @@
 		5DD9884C218FDCAE006342F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD9884A218FDCAE006342F0 /* LaunchScreen.storyboard */; };
 		5DD98857218FDCAF006342F0 /* BuymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD98856218FDCAF006342F0 /* BuymeTests.swift */; };
 		5DD98862218FDCAF006342F0 /* BuymeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD98861218FDCAF006342F0 /* BuymeUITests.swift */; };
+		A967DB95257234EE00EAC002 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967DB94257234EE00EAC002 /* HeaderView.swift */; };
+		A967DB9825724F0D00EAC002 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A967DB9725724F0D00EAC002 /* fa-solid-900.ttf */; };
+		A967DB9C2572C42C00EAC002 /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A967DB9A2572C42C00EAC002 /* CartItemTableViewCell.swift */; };
+		A967DB9D2572C42C00EAC002 /* CartItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A967DB9B2572C42C00EAC002 /* CartItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +209,10 @@
 		63EC81CA9C3B8C342A4B3868 /* Pods-Retail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Retail/Pods-Retail.release.xcconfig"; sourceTree = "<group>"; };
 		72D578250215FA9E9C5EB614 /* Pods-EBanking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBanking.release.xcconfig"; path = "Pods/Target Support Files/Pods-EBanking/Pods-EBanking.release.xcconfig"; sourceTree = "<group>"; };
 		96E410EC5B678CBAF6808AB9 /* Pods_Buyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A967DB94257234EE00EAC002 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A967DB9725724F0D00EAC002 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
+		A967DB9A2572C42C00EAC002 /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
+		A967DB9B2572C42C00EAC002 /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		D7483A4998BC780A88238937 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D8108AEF24483E90F7D8D664 /* Pods-Retail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Retail/Pods-Retail.debug.xcconfig"; sourceTree = "<group>"; };
 		F0F815679BCAE7E9DC0DB430 /* Pods-Buyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buyme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buyme/Pods-Buyme.debug.xcconfig"; sourceTree = "<group>"; };
@@ -303,6 +311,7 @@
 				009A2ED32428C78D0012CF30 /* LoadingView.swift */,
 				009A2ED42428C78D0012CF30 /* MessageView.swift */,
 				009A2F792428C78D0012CF30 /* ProgressView.swift */,
+				A967DB94257234EE00EAC002 /* HeaderView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 		009A2F9F2428C78D0012CF30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A967DB9625724ED400EAC002 /* Awesome */,
 				009A2FA22428C78D0012CF30 /* Localizable.strings */,
 				151B4E22256F9E9E00FE5F4F /* Roboto */,
 				009A2FAD2428C78D0012CF30 /* Font */,
@@ -368,6 +378,7 @@
 		151B4E00256F5D3D00FE5F4F /* CreateNew */ = {
 			isa = PBXGroup;
 			children = (
+				A967DB992572C3E000EAC002 /* CartItemViewCell */,
 				151B4E01256F5D6A00FE5F4F /* CreateNewViewController.swift */,
 			);
 			path = CreateNew;
@@ -525,6 +536,23 @@
 			path = BuymeUITests;
 			sourceTree = "<group>";
 		};
+		A967DB9625724ED400EAC002 /* Awesome */ = {
+			isa = PBXGroup;
+			children = (
+				A967DB9725724F0D00EAC002 /* fa-solid-900.ttf */,
+			);
+			path = Awesome;
+			sourceTree = "<group>";
+		};
+		A967DB992572C3E000EAC002 /* CartItemViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A967DB9A2572C42C00EAC002 /* CartItemTableViewCell.swift */,
+				A967DB9B2572C42C00EAC002 /* CartItemTableViewCell.xib */,
+			);
+			path = CartItemViewCell;
+			sourceTree = "<group>";
+		};
 		FB3E75537B7A1D4E298A7394 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,12 +691,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				151B4E34256F9E9E00FE5F4F /* Roboto-ThinItalic.ttf in Resources */,
+				A967DB9D2572C42C00EAC002 /* CartItemTableViewCell.xib in Resources */,
 				151B4E35256F9E9E00FE5F4F /* Roboto-BoldItalic.ttf in Resources */,
 				151B4E3B256F9E9E00FE5F4F /* Roboto-Thin.ttf in Resources */,
 				151B4E36256F9E9E00FE5F4F /* Roboto-LightItalic.ttf in Resources */,
 				00889D862428903700CDBDCC /* Main.storyboard in Resources */,
 				151B4E3C256F9E9E00FE5F4F /* Roboto-Black.ttf in Resources */,
 				5DD9884C218FDCAE006342F0 /* LaunchScreen.storyboard in Resources */,
+				A967DB9825724F0D00EAC002 /* fa-solid-900.ttf in Resources */,
 				151B4E37256F9E9E00FE5F4F /* Roboto-Italic.ttf in Resources */,
 				151B4E38256F9E9E00FE5F4F /* LICENSE.txt in Resources */,
 				15A7A78C2570B8BB00288B7B /* TopSearchCollectionViewCell.xib in Resources */,
@@ -781,6 +811,7 @@
 				009A31912428C78E0012CF30 /* ClassName.swift in Sources */,
 				00D886D524E3A84B0081B3C0 /* HttpResponseUtils.swift in Sources */,
 				004883C2246E456200DD81D5 /* BaseView.swift in Sources */,
+				A967DB9C2572C42C00EAC002 /* CartItemTableViewCell.swift in Sources */,
 				009A318B2428C78E0012CF30 /* Reachability.swift in Sources */,
 				15EAE3202570007700FFD5A0 /* VideoPlayerView.swift in Sources */,
 				009A31962428C78E0012CF30 /* DatePickerDialog.swift in Sources */,
@@ -816,6 +847,7 @@
 				15A7A78B2570B8BB00288B7B /* TopSearchCollectionViewCell.swift in Sources */,
 				009A313E2428C78E0012CF30 /* MessageView.swift in Sources */,
 				00B5847324B5C49B00BCD685 /* CollectionView.swift in Sources */,
+				A967DB95257234EE00EAC002 /* HeaderView.swift in Sources */,
 				154C302724FE43BC00D52FEF /* MoneyUtils.swift in Sources */,
 				009A31A42428C78E0012CF30 /* ProgressView.swift in Sources */,
 				009A318E2428C78E0012CF30 /* LocalizedUtils.swift in Sources */,
@@ -1021,7 +1053,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2R26SBV6RL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Buyme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1088,7 +1120,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2R26SBV6RL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Buyme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -21,5 +21,7 @@ target 'Buyme' do
   pod 'Kingfisher'
   
   pod 'BMPlayer'
+  
+  pod 'FontAwesomeKit', '~> 2.2'
 
 end

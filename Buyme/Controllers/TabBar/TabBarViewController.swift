@@ -10,7 +10,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
-    private let titles: [String] = ["Home", "Search", "Create New", "User"]
+    private let titles: [String] = ["Home", "Search", "Cart", "User"]
     private let itemsImage: [String] = ["TBIHome", "TBISearch", "", ""]
     private let selectedItemsImage: [String] = ["TBISelectedHome", "TBISelectedSearch", "", ""]
 

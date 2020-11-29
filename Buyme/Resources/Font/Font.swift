@@ -25,6 +25,7 @@ class Font {
         regular = UIFont(name: kRobotoRegular, size: 13)
         thin = UIFont(name: kRobotoThin, size: 13)
         thinItalic = UIFont(name: kRobotoThinItalic, size: 13)
+        awesome = UIFont(name: kAwesome, size: 13)
     }
     
     var black: UIFont?
@@ -39,6 +40,7 @@ class Font {
     var regular: UIFont?
     var thin: UIFont?
     var thinItalic: UIFont?
+    var awesome: UIFont?
 
     private let kRobotoBlack: String        = "Roboto-Black"
     private let kRobotoBlackItalic: String  = "Roboto-BlackItalic"
@@ -52,4 +54,5 @@ class Font {
     private let kRobotoRegular: String      = "Roboto-Regular"
     private let kRobotoThin: String         = "Roboto-Thin"
     private let kRobotoThinItalic: String   = "Roboto-ThinItalic"
+    private let kAwesome: String            = "Font Awesome 5 Free"
 }

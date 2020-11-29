@@ -92,6 +92,7 @@
 		<string>MYRIADPRO-BLACKCONDIT.OTF</string>
 		<string>MYRIADPRO-BLACKCOND.OTF</string>
 		<string>MYRIADPRO-BLACK.OTF</string>
+		<string>fa-solid-900.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

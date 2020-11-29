@@ -13,6 +13,27 @@ PODS:
   - DatePickerDialog (3.0)
   - DPLocalization (1.13)
   - DropDown (2.3.13)
+  - FontAwesomeKit (2.2.1):
+    - FontAwesomeKit/Core (= 2.2.1)
+    - FontAwesomeKit/FontAwesome (= 2.2.1)
+    - FontAwesomeKit/FoundationIcons (= 2.2.1)
+    - FontAwesomeKit/IonIcons (= 2.2.1)
+    - FontAwesomeKit/Material (= 2.2.1)
+    - FontAwesomeKit/Octicons (= 2.2.1)
+    - FontAwesomeKit/Zocial (= 2.2.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FontAwesome (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Material (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Octicons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.1):
+    - FontAwesomeKit/Core
   - FSPagerView (0.8.3)
   - IQKeyboardManager (6.5.5)
   - JWTDecode (2.4.1)
@@ -33,6 +54,7 @@ DEPENDENCIES:
   - DatePickerDialog
   - DPLocalization
   - DropDown
+  - FontAwesomeKit (~> 2.2)
   - FSPagerView
   - IQKeyboardManager
   - JWTDecode
@@ -50,6 +72,7 @@ SPEC REPOS:
     - DatePickerDialog
     - DPLocalization
     - DropDown
+    - FontAwesomeKit
     - FSPagerView
     - IQKeyboardManager
     - JWTDecode
@@ -68,6 +91,7 @@ SPEC CHECKSUMS:
   DatePickerDialog: 03dbb8350bfa80302ab2a8c83cee1fec70184444
   DPLocalization: 00b71b9c4043f8eaeb41bedcf2c90d847adcd4d8
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JWTDecode: 4bd4da0cdf0f8154fd467fa48499f34ec057fb88
@@ -79,6 +103,6 @@ SPEC CHECKSUMS:
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   SwipeMenuViewController: c2c1f9b62022ce6b904b2553f0fa340c9008becd
 
-PODFILE CHECKSUM: afa482fe8ab0676432e016de5b3e906418ef5dd7
+PODFILE CHECKSUM: 66c7d1b91ad8690516c253fb347c8b4e469243d3
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
