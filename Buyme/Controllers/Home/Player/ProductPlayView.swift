@@ -12,7 +12,18 @@ import BMPlayer
 class ProductPlayView: BaseView {
     
     var player: BMPlayer!
-    var link: String?
+    var nameLabel: Label = .init()
+    var descriptionLabel: Label = .init()
+    
+    var name: String? {
+        get { nameLabel.text }
+        set { nameLabel.text = newValue }
+    }
+    
+    var detail: String? {
+        get { descriptionLabel.text }
+        set { descriptionLabel.text = newValue }
+    }
     
     override func initViews() {
         player = .init()
@@ -21,13 +32,18 @@ class ProductPlayView: BaseView {
             make.top.right.left.bottom.equalToSuperview()
         }
         
-        self.setVideo()
-        
         let view = UIView()
         addSubview(view)
         view.snp.makeConstraints { make in
             make.top.right.bottom.left.equalToSuperview()
         }
+        
+        let button = UIButton()
+        view.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.top.right.bottom.left.equalToSuperview()
+        }
+        button.addTarget(self, action: #selector(touchUpInside(_:)), for: .touchUpInside)
         
         let categoryView = UIView()
         view.addSubview(categoryView)
@@ -85,7 +101,6 @@ class ProductPlayView: BaseView {
             make.bottom.equalTo(view).offset(-10)
             make.left.equalTo(view).offset(10)
         }
-        let nameLabel: Label = .init()
         detailView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
             make.top.right.left.equalToSuperview()
@@ -94,16 +109,16 @@ class ProductPlayView: BaseView {
         nameLabel.font = Font.shared.bold?.withSize(13)
         nameLabel.textColor = .white
         nameLabel.text = "Thỏ Béo 1,5 tấn"
-        let detailLabel = Label.init()
-        detailView.addSubview(detailLabel)
-        detailLabel.snp.makeConstraints { make in
+        
+        detailView.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(nameLabel.snp.bottom)
             make.right.bottom.left.equalToSuperview()
         }
-        detailLabel.font = Font.shared.regular?.withSize(12)
-        detailLabel.textColor = .white
-        detailLabel.text = "Sáng 27-11, tại Hà Nội,Tổng Bí thư, Chủ tịch nước Nguyễn Phú Trọng dự và phát biểu chỉ đạo Hội nghị toàn quốc tổng kết công tác kiểm tra, giám sát nhiệm kỳ Đại hội XII của Đảng do Ban Bí thư tổ chức."
-        detailLabel.numberOfLines = 0
+        descriptionLabel.font = Font.shared.regular?.withSize(12)
+        descriptionLabel.textColor = .white
+        descriptionLabel.text = "Sáng 27-11, tại Hà Nội,Tổng Bí thư, Chủ tịch nước Nguyễn Phú Trọng dự và phát biểu chỉ đạo Hội nghị toàn quốc tổng kết công tác kiểm tra, giám sát nhiệm kỳ Đại hội XII của Đảng do Ban Bí thư tổ chức."
+        descriptionLabel.numberOfLines = 0
         
         let shareView = PostButtonView.init()
         view.addSubview(shareView)
@@ -149,16 +164,21 @@ class ProductPlayView: BaseView {
             make.height.equalTo(40)
         }
         addCartView.image = UIImage(named: "PostAddToCart")
-        heartView.tag = 3
-        heartView.delegate = self
+        addCartView.tag = 3
+        addCartView.delegate = self
         
     }
     
-    private func setVideo() {
-        //ß
-        if let link = self.link, let url = URL(string: link) {
-            player.setVideo(resource: .init(url: url))
+    func setVideo(link: String?) {
+        if let link = link, let url = URL(string: link) {
+            DispatchQueue.main.async {
+                self.player.setVideo(resource: .init(url: url))
+            }
         }
+    }
+    
+    @objc func touchUpInside(_ sender: UIButton) {
+        player.isPlaying ? player.pause() : player.play()
     }
 }
 

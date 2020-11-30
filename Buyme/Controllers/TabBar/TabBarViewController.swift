@@ -11,15 +11,14 @@ import UIKit
 class TabBarViewController: UITabBarController {
     
     private let titles: [String] = ["Home", "Search", "Cart", "User"]
-    private let itemsImage: [String] = ["TBIHome", "TBISearch", "", ""]
-    private let selectedItemsImage: [String] = ["TBISelectedHome", "TBISelectedSearch", "", ""]
+    private let itemsImage: [String] = ["TBIHome", "TBISearch", "TBICart", ""]
+    private let selectedItemsImage: [String] = ["TBISelectedHome", "TBISelectedSearch", "TBISelectedCart", ""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tabBar.tintColor = ColorUtils.shared.appColor
         tabBar.unselectedItemTintColor = ColorUtils.shared.gray1
-//        tabBar.barTintColor = UIColor.white
 
         let vcs = [HomeViewController(), SearchViewController(), CreateNewViewController(), UserManagerViewController()]
         for index in 0...vcs.count - 1 {

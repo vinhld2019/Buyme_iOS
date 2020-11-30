@@ -10,54 +10,51 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
-    var followingView: ProductPlayView!
+    var tabsView: UIView = .init()
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var followingButton: UIButton!
+    @IBOutlet weak var suggestingButton: UIButton!
+    @IBOutlet weak var trendingButton: UIButton!
+    
+    private var tabs: [UIButton] { [followingButton, suggestingButton, trendingButton] }
+    
+    @IBAction func changeTab(_ sender: UIButton) {
+        for button in tabs {
+            button.setTitleColor(.init(rgb: 0xFFFFFF, alpha: button.tag == sender.tag ? 1 : 0.8), for: .normal)
+        }
+    }
 
     override func viewDidLoad() {
+        tabBarController?.tabBar.barTintColor = .black
         super.viewDidLoad()
     }
     
-//    private func addTabsView() {
-//
-//    }
+    private func addTabsView() {
+
+    }
     
     override func initViews() {
         super.initViews()
-        
         view.backgroundColor = .black
         
-        followingView = .init()
-        view.addSubview(followingView)
-        followingView.snp.makeConstraints { make in
-            make.top.right.bottom.left.equalTo(self.view.safeAreaLayoutGuide)
-        }
-        followingView.link = "https://v9-vn.tiktokcdn.com/87378a7c590583da393c16e201497a03/5fc51955/video/tos/alisg/tos-alisg-pve-0037c001/e5f589f6522d4609ae48680a0a3d4dc3/"
-        
-        let tabsView = UIView()
-        view.addSubview(tabsView)
-        tabsView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.right.left.equalTo(self.view.safeAreaLayoutGuide)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(50)
-        }
-        tabsView.backgroundColor = .init(rgb: 0xFFFFFF, alpha: 0.4)
-        let followingLabel = Label()
-        tabsView.addSubview(followingLabel)
-        followingLabel.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            
-        }
+        PlayerCollectionViewCell.register(collectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+//        followingView.setVideo(link: "https://v9-vn.tiktokcdn.com/574348b2bf83393a0ce3d73db33a52a5/5fc56e0a/video/tos/alisg/tos-alisg-pve-0037c001/52c28b666a454b73a9fd4dcd2ac26092/")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        followingView.player.pause()
+        tabBarController?.tabBar.barTintColor = .white
+//        followingView.player.pause()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        followingView.player.play()
+        tabBarController?.tabBar.barTintColor = .black
+//        followingView.player.play()
     }
     
     
@@ -66,4 +63,44 @@ class HomeViewController: BaseViewController {
         sender.setTitle(DeviceUtils.shared.wifiIPAddress, for: .normal)
     }
 
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        collectionView.frame.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        for cell in collectionView.visibleCells {
+            let indexPath = collectionView.indexPath(for: cell)
+            print(indexPath?.row)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+    }
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = PlayerCollectionViewCell.cell(for: collectionView, at: indexPath) {
+            return cell
+        }
+        
+        return .init()
+    }
 }

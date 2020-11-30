@@ -47,7 +47,6 @@
 		1501546A256F450300F360C6 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15015469256F450300F360C6 /* CartView.swift */; };
 		151B4DFF256F5CFD00FE5F4F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151B4DFE256F5CFD00FE5F4F /* SearchViewController.swift */; };
 		151B4E03256F5D6A00FE5F4F /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151B4E01256F5D6A00FE5F4F /* CreateNewViewController.swift */; };
-		151B4E07256F5E1500FE5F4F /* UserManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151B4E06256F5E1500FE5F4F /* UserManagerViewController.swift */; };
 		151B4E30256F9E9E00FE5F4F /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 151B4E23256F9E9E00FE5F4F /* Roboto-Medium.ttf */; };
 		151B4E31256F9E9E00FE5F4F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 151B4E24256F9E9E00FE5F4F /* Roboto-Light.ttf */; };
 		151B4E32256F9E9E00FE5F4F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 151B4E25256F9E9E00FE5F4F /* Roboto-Regular.ttf */; };
@@ -80,17 +79,18 @@
 		1570C24C25751089007685BA /* SearchWithCategoriesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C24725751089007685BA /* SearchWithCategoriesViewController+CollectionView.swift */; };
 		1570C24F257510F4007685BA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C24D257510F3007685BA /* Product.swift */; };
 		1570C250257510F4007685BA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C24E257510F4007685BA /* Category.swift */; };
+		1570C25225754CE4007685BA /* UserManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C25125754CE4007685BA /* UserManagerViewController.swift */; };
+		1570C2542575517A007685BA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1570C2532575517A007685BA /* HomeViewController.xib */; };
+		1570C25D25755D35007685BA /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C25B25755D35007685BA /* PlayerCollectionViewCell.swift */; };
+		1570C25E25755D35007685BA /* PlayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1570C25C25755D35007685BA /* PlayerCollectionViewCell.xib */; };
 		15A41B902510D5BD00EC4945 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A41B8F2510D5BD00EC4945 /* AlertUtils.swift */; };
 		15A7A78B2570B8BB00288B7B /* TopSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7A7892570B8BB00288B7B /* TopSearchCollectionViewCell.swift */; };
 		15A7A78C2570B8BB00288B7B /* TopSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A7A78A2570B8BB00288B7B /* TopSearchCollectionViewCell.xib */; };
 		15A7A78E25710DEF00288B7B /* PostButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7A78D25710DEF00288B7B /* PostButtonView.swift */; };
-		15A7A7902571128200288B7B /* HomeViewController+PostButtonViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7A78F2571128200288B7B /* HomeViewController+PostButtonViewDelegate.swift */; };
 		15AA0267250512D5000CD265 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA0266250512D5000CD265 /* HomeViewController.swift */; };
 		15AA026925051317000CD265 /* Mics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA026825051317000CD265 /* Mics.swift */; };
 		15B8DAB424EE26E700BCDC76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15B8DAB624EE26E700BCDC76 /* InfoPlist.strings */; };
 		15D6B20F2505DB88006D3F24 /* SecurityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6B20E2505DB88006D3F24 /* SecurityUtils.swift */; };
-		15EAE31E256FFEF300FFD5A0 /* FollowingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAE31D256FFEF300FFD5A0 /* FollowingView.swift */; };
-		15EAE3202570007700FFD5A0 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EAE31F2570007700FFD5A0 /* VideoPlayerView.swift */; };
 		1A961872B8F086EA80D0C823 /* Pods_Buyme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E410EC5B678CBAF6808AB9 /* Pods_Buyme.framework */; };
 		5DD98842218FDCAB006342F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD98841218FDCAB006342F0 /* AppDelegate.swift */; };
 		5DD98849218FDCAE006342F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DD98848218FDCAE006342F0 /* Assets.xcassets */; };
@@ -162,7 +162,6 @@
 		15015469256F450300F360C6 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		151B4DFE256F5CFD00FE5F4F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		151B4E01256F5D6A00FE5F4F /* CreateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
-		151B4E06256F5E1500FE5F4F /* UserManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerViewController.swift; sourceTree = "<group>"; };
 		151B4E23256F9E9E00FE5F4F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		151B4E24256F9E9E00FE5F4F /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		151B4E25256F9E9E00FE5F4F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -196,19 +195,19 @@
 		1570C24725751089007685BA /* SearchWithCategoriesViewController+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchWithCategoriesViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		1570C24D257510F3007685BA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1570C24E257510F4007685BA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1570C25125754CE4007685BA /* UserManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerViewController.swift; sourceTree = "<group>"; };
+		1570C2532575517A007685BA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1570C25B25755D35007685BA /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		1570C25C25755D35007685BA /* PlayerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCollectionViewCell.xib; sourceTree = "<group>"; };
 		15A41B8F2510D5BD00EC4945 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		15A7A7892570B8BB00288B7B /* TopSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A7A78A2570B8BB00288B7B /* TopSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		15A7A78D25710DEF00288B7B /* PostButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostButtonView.swift; sourceTree = "<group>"; };
-		15A7A78F2571128200288B7B /* HomeViewController+PostButtonViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+PostButtonViewDelegate.swift"; sourceTree = "<group>"; };
 		15AA0266250512D5000CD265 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15AA026825051317000CD265 /* Mics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mics.swift; sourceTree = "<group>"; };
 		15B8DAB524EE26E700BCDC76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15B8DAB724EE26EB00BCDC76 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15D6B20E2505DB88006D3F24 /* SecurityUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityUtils.swift; sourceTree = "<group>"; };
-		15EAE31D256FFEF300FFD5A0 /* FollowingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingView.swift; sourceTree = "<group>"; };
-		15EAE31F2570007700FFD5A0 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
-		5D27C17B21C10B78004289C1 /* BaseProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaseProject.entitlements; sourceTree = "<group>"; };
 		5DC2CE1F21E3558A00C6BACA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5DD9883E218FDCAB006342F0 /* Buyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD98841218FDCAB006342F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -406,7 +405,7 @@
 		151B4E05256F5E0700FE5F4F /* User */ = {
 			isa = PBXGroup;
 			children = (
-				151B4E06256F5E1500FE5F4F /* UserManagerViewController.swift */,
+				1570C25125754CE4007685BA /* UserManagerViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -469,6 +468,17 @@
 			path = ProductCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		1570C25A25755CD9007685BA /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				15A7A78D25710DEF00288B7B /* PostButtonView.swift */,
+				1570C23F2575106B007685BA /* ProductPlayView.swift */,
+				1570C25B25755D35007685BA /* PlayerCollectionViewCell.swift */,
+				1570C25C25755D35007685BA /* PlayerCollectionViewCell.xib */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		15A7A7882570B8A800288B7B /* TopSearchCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,12 +499,9 @@
 		15C13431256F5B8D00870142 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1570C25A25755CD9007685BA /* Player */,
 				15AA0266250512D5000CD265 /* HomeViewController.swift */,
-				15EAE31D256FFEF300FFD5A0 /* FollowingView.swift */,
-				15EAE31F2570007700FFD5A0 /* VideoPlayerView.swift */,
-				15A7A78D25710DEF00288B7B /* PostButtonView.swift */,
-				15A7A78F2571128200288B7B /* HomeViewController+PostButtonViewDelegate.swift */,
-				1570C23F2575106B007685BA /* ProductPlayView.swift */,
+				1570C2532575517A007685BA /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -551,7 +558,6 @@
 				5DD98841218FDCAB006342F0 /* AppDelegate.swift */,
 				009A2A692428B06F0012CF30 /* SceneDelegate.swift */,
 				5DD98848218FDCAE006342F0 /* Assets.xcassets */,
-				5D27C17B21C10B78004289C1 /* BaseProject.entitlements */,
 				5DD9884A218FDCAE006342F0 /* LaunchScreen.storyboard */,
 				00889D852428903700CDBDCC /* Main.storyboard */,
 			);
@@ -738,6 +744,7 @@
 				00889D862428903700CDBDCC /* Main.storyboard in Resources */,
 				151B4E3C256F9E9E00FE5F4F /* Roboto-Black.ttf in Resources */,
 				5DD9884C218FDCAE006342F0 /* LaunchScreen.storyboard in Resources */,
+				1570C25E25755D35007685BA /* PlayerCollectionViewCell.xib in Resources */,
 				A967DB9825724F0D00EAC002 /* fa-solid-900.ttf in Resources */,
 				151B4E37256F9E9E00FE5F4F /* Roboto-Italic.ttf in Resources */,
 				151B4E38256F9E9E00FE5F4F /* LICENSE.txt in Resources */,
@@ -745,6 +752,7 @@
 				1570C24925751089007685BA /* ProductCollectionViewCell.xib in Resources */,
 				151B4E45256FB52F00FE5F4F /* ProductsForYouCollectionViewCell.xib in Resources */,
 				151B4E39256F9E9E00FE5F4F /* Roboto-BlackItalic.ttf in Resources */,
+				1570C2542575517A007685BA /* HomeViewController.xib in Resources */,
 				1570C24825751089007685BA /* SearchWithCategoriesViewController.xib in Resources */,
 				151B4E32256F9E9E00FE5F4F /* Roboto-Regular.ttf in Resources */,
 				151B4E30256F9E9E00FE5F4F /* Roboto-Medium.ttf in Resources */,
@@ -849,7 +857,7 @@
 				009A31F82428C78F0012CF30 /* Font.swift in Sources */,
 				15A7A78E25710DEF00288B7B /* PostButtonView.swift in Sources */,
 				009A318F2428C78E0012CF30 /* AppUtils.swift in Sources */,
-				151B4E07256F5E1500FE5F4F /* UserManagerViewController.swift in Sources */,
+				1570C25225754CE4007685BA /* UserManagerViewController.swift in Sources */,
 				009A326D2428C78F0012CF30 /* NavigationController.swift in Sources */,
 				1570C24F257510F4007685BA /* Product.swift in Sources */,
 				1570C2402575106B007685BA /* ProductPlayView.swift in Sources */,
@@ -858,13 +866,12 @@
 				004883C2246E456200DD81D5 /* BaseView.swift in Sources */,
 				A967DB9C2572C42C00EAC002 /* CartItemTableViewCell.swift in Sources */,
 				009A318B2428C78E0012CF30 /* Reachability.swift in Sources */,
-				15EAE3202570007700FFD5A0 /* VideoPlayerView.swift in Sources */,
 				009A31962428C78E0012CF30 /* DatePickerDialog.swift in Sources */,
 				009A318A2428C78E0012CF30 /* DateUtils.swift in Sources */,
 				1565489324FE65DE00588E4B /* WindowUtils.swift in Sources */,
 				5DD98842218FDCAB006342F0 /* AppDelegate.swift in Sources */,
 				151B4E03256F5D6A00FE5F4F /* CreateNewViewController.swift in Sources */,
-				15A7A7902571128200288B7B /* HomeViewController+PostButtonViewDelegate.swift in Sources */,
+				1570C25D25755D35007685BA /* PlayerCollectionViewCell.swift in Sources */,
 				151B4E4D256FC01200FE5F4F /* ShopForYouCollectionViewCell.swift in Sources */,
 				009A318C2428C78E0012CF30 /* ViewUtils.swift in Sources */,
 				1570C24C25751089007685BA /* SearchWithCategoriesViewController+CollectionView.swift in Sources */,
@@ -884,7 +891,6 @@
 				009A31832428C78E0012CF30 /* TokenUtils.swift in Sources */,
 				1501546A256F450300F360C6 /* CartView.swift in Sources */,
 				15D6B20F2505DB88006D3F24 /* SecurityUtils.swift in Sources */,
-				15EAE31E256FFEF300FFD5A0 /* FollowingView.swift in Sources */,
 				009A31932428C78E0012CF30 /* ApiUtils.swift in Sources */,
 				009A2A6A2428B06F0012CF30 /* SceneDelegate.swift in Sources */,
 				009A31B42428C78F0012CF30 /* AvatarView.swift in Sources */,

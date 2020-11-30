@@ -20,6 +20,14 @@ extension ClassNameable {
     static var nib: UINib {
         return UINib(nibName: Self.className, bundle: nil)
     }
+    
+    static func register(_ view: UICollectionView) {
+        view.register(nib, forCellWithReuseIdentifier: className)
+    }
+    
+    static func cell(for view: UICollectionView, at indextPath: IndexPath) -> Self? {
+        view.dequeueReusableCell(withReuseIdentifier: className, for: indextPath) as? Self
+    }
 }
 
 extension NSObject: ClassNameable {}
