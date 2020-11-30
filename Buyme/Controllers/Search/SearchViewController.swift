@@ -19,6 +19,8 @@ class SearchViewController: BaseViewController {
     private var searchView: UIView!
     private var scrollContentView: UIView!
     
+    private var categoriesView: UIView!
+    
     private var productsView: UIView!
     private var boughtProductsLabel: Label!
     private var productsCollectionView: UICollectionView!
@@ -28,7 +30,6 @@ class SearchViewController: BaseViewController {
     private var creatorsCollectionView: UICollectionView!
     
     private var topSearchView: UIView!
-    private var categoriesView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +41,10 @@ class SearchViewController: BaseViewController {
         super.initViews()
         
         self.addSearchView()
+        addCategories()
         self.addProductsView()
         self.addCreatorsView()
         addTopSearchView()
-        addCategories()
     }
     
     private func addListView(topConstrain: ConstraintItem, isLast: Bool = false, direction: UICollectionView.ScrollDirection = .horizontal, title: String, clTag: Int, nib: UINib, identifier: String) -> (UIView, Label, UICollectionView) {
@@ -52,11 +53,14 @@ class SearchViewController: BaseViewController {
         contentView.snp.makeConstraints { make in
             make.top.equalTo(topConstrain).offset(5)
             make.right.left.equalToSuperview()
-            if isLast {
-                make.height.equalTo(500)
-                make.bottom.equalToSuperview()
-            } else {
-                make.height.equalTo(210)
+            make.height.equalTo(210)
+        }
+        if isLast {
+            let bottomLabel = Label()
+            scrollContentView.addSubview(bottomLabel)
+            bottomLabel.snp.makeConstraints { make in
+                make.top.equalTo(contentView.snp.bottom)
+                make.left.bottom.right.equalToSuperview()
             }
         }
         
@@ -115,18 +119,19 @@ class SearchViewController: BaseViewController {
         boughtLabel.autolocalizationKey = isLast ? nil : "Sold"
         
         let layout = UICollectionViewFlowLayout()
-        if isLast {
-            let height: CGFloat = 120
-            let maxWidth = self.view.bounds.size.width - 20
-            let ns = (maxWidth / 100).rounded()
-            let width: CGFloat = maxWidth / ns
-            let size = CGSize(width: width - 5, height: height)
-            layout.itemSize = size
-            layout.minimumLineSpacing = 5
-            layout.minimumInteritemSpacing = 5
-        } else {
-            layout.itemSize = CGSize(width: 100, height: 150)
-        }
+//        if isLast {
+//            let height: CGFloat = 120
+//            let maxWidth = self.view.bounds.size.width - 20
+//            let ns = (maxWidth / 100).rounded()
+//            let width: CGFloat = maxWidth / ns
+//            let size = CGSize(width: width - 5, height: height)
+//            layout.itemSize = size
+//            layout.minimumLineSpacing = 5
+//            layout.minimumInteritemSpacing = 5
+//        } else {
+//            layout.itemSize = CGSize(width: 100, height: 150)
+//        }
+        layout.itemSize = CGSize(width: 100, height: 150)
         layout.scrollDirection = direction
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.tag = clTag
@@ -149,8 +154,13 @@ class SearchViewController: BaseViewController {
         return (contentView, boughtNumberLabel, collectionView)
     }
     
+    private func addCategories() {
+        let information = addListView(topConstrain: scrollContentView.snp.top, title: "Categories", clTag: kCategoriesTag, nib: TopSearchCollectionViewCell.nib, identifier: TopSearchCollectionViewCell.className)
+        categoriesView = information.0
+    }
+    
     private func addProductsView() {
-        let information = addListView(topConstrain: scrollContentView.snp.top, title: "Products for you", clTag: kProductsTag, nib: ProductsForYouCollectionViewCell.nib, identifier: ProductsForYouCollectionViewCell.className)
+        let information = addListView(topConstrain: categoriesView.snp.bottom, title: "Products for you", clTag: kProductsTag, nib: ProductsForYouCollectionViewCell.nib, identifier: ProductsForYouCollectionViewCell.className)
         productsView = information.0
         boughtProductsLabel = information.1
         productsCollectionView = information.2
@@ -166,13 +176,9 @@ class SearchViewController: BaseViewController {
     }
     
     private func addTopSearchView() {
-        let information = addListView(topConstrain: creatorsView.snp.bottom, title: "Top Search", clTag: kTopSearchTag, nib: TopSearchCollectionViewCell.nib, identifier: TopSearchCollectionViewCell.className)
+        let information = addListView(topConstrain: creatorsView.snp.bottom, isLast: true, title: "Top Search", clTag: kTopSearchTag, nib: TopSearchCollectionViewCell.nib, identifier: TopSearchCollectionViewCell.className)
         topSearchView = information.0
         information.1.text = "696.9 K"
-    }
-    
-    private func addCategories() {
-        let information = addListView(topConstrain: topSearchView.snp.bottom, isLast: true, direction: .vertical, title: "Categories", clTag: kCategoriesTag, nib: TopSearchCollectionViewCell.nib, identifier: TopSearchCollectionViewCell.className)
     }
     
     @objc func search(_ sender: UIButton) {

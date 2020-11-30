@@ -16,8 +16,10 @@ class CreateNewViewController: BaseViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CartItemTableViewCell.className, for: indexPath) as! CartItemTableViewCell
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CartItemTableViewCell.className, for: indexPath) as? CartItemTableViewCell {
+            return cell
+        }
+        return .init()
     }
     
     
