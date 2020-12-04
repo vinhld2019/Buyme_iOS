@@ -16,6 +16,7 @@ class ProductPlayView: FromNibBaseView {
     @IBOutlet weak var categoryLabel: Label!
     @IBOutlet weak var authorLabel: Label!
     @IBOutlet weak var authorImageView: UIImageView!
+    @IBOutlet weak var followImageView: UIImageView!
     @IBOutlet weak var heartLabel: Label!
     @IBOutlet weak var commentsLabel: Label!
     @IBOutlet weak var shareLabel: Label!
@@ -64,14 +65,12 @@ class ProductPlayView: FromNibBaseView {
     let kHeartTag: Int = 2
     let kCartTag: Int = 3
     
-    var name: String? {
-        get { nameLabel.text }
-        set { nameLabel.text = newValue }
+    @IBAction func gotoProduct(_ sender: UIButton) {
+        AppUtils.shared.pushViewController(typeClass: ProductViewController.self)
     }
     
-    var detail: String? {
-        get { descriptionLabel.text }
-        set { descriptionLabel.text = newValue }
+    @IBAction func follow(_ sender: UIButton) {
+        followImageView.image = UIImage(named: "ShopFollowed")
     }
     
     func setVideo(link: String?) {
@@ -100,5 +99,9 @@ class ProductPlayView: FromNibBaseView {
         DispatchQueue.main.async {
             self.player.pause()
         }
+    }
+    
+    override func initViews() {
+        super.initViews()
     }
 }

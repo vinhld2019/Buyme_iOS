@@ -29,6 +29,8 @@ identifier_name:
         - i
         - vc
         - ip
+        - x
+        - y
 type_body_length:
     warning: 500
     error: 750

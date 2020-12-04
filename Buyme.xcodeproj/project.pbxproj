@@ -91,6 +91,8 @@
 		1561E6D3257A7100002C25C5 /* ProductPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561E6D2257A7100002C25C5 /* ProductPlayView.xib */; };
 		1561E6D7257A8DB2002C25C5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561E6D5257A8DB2002C25C5 /* ShopViewController.swift */; };
 		1561E6D8257A8DB2002C25C5 /* ShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561E6D6257A8DB2002C25C5 /* ShopViewController.xib */; };
+		1561E6DC257A9FAB002C25C5 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561E6DA257A9FAB002C25C5 /* ProductViewController.swift */; };
+		1561E6DD257A9FAB002C25C5 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561E6DB257A9FAB002C25C5 /* ProductViewController.xib */; };
 		1565489324FE65DE00588E4B /* WindowUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565489224FE65DE00588E4B /* WindowUtils.swift */; };
 		1570C2402575106B007685BA /* ProductPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C23F2575106B007685BA /* ProductPlayView.swift */; };
 		1570C24825751089007685BA /* SearchWithCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1570C24225751089007685BA /* SearchWithCategoriesViewController.xib */; };
@@ -227,6 +229,8 @@
 		1561E6D2257A7100002C25C5 /* ProductPlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductPlayView.xib; sourceTree = "<group>"; };
 		1561E6D5257A8DB2002C25C5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		1561E6D6257A8DB2002C25C5 /* ShopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopViewController.xib; sourceTree = "<group>"; };
+		1561E6DA257A9FAB002C25C5 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		1561E6DB257A9FAB002C25C5 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		1565489124FE654000588E4B /* Buyme-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Buyme-Bridging-Header.h"; sourceTree = "<group>"; };
 		1565489224FE65DE00588E4B /* WindowUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowUtils.swift; sourceTree = "<group>"; };
 		1570C23F2575106B007685BA /* ProductPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPlayView.swift; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 		009A2FEC2428C78D0012CF30 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1561E6D9257A9F9B002C25C5 /* Product */,
 				1561E6D4257A8DA4002C25C5 /* Shop */,
 				151B4E05256F5E0700FE5F4F /* User */,
 				1570C24125751089007685BA /* SearchWithCategoríe */,
@@ -537,6 +542,15 @@
 				1561E6D6257A8DB2002C25C5 /* ShopViewController.xib */,
 			);
 			path = Shop;
+			sourceTree = "<group>";
+		};
+		1561E6D9257A9F9B002C25C5 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				1561E6DA257A9FAB002C25C5 /* ProductViewController.swift */,
+				1561E6DB257A9FAB002C25C5 /* ProductViewController.xib */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		1570C24125751089007685BA /* SearchWithCategoríe */ = {
@@ -858,6 +872,7 @@
 				151B4E3B256F9E9E00FE5F4F /* Roboto-Thin.ttf in Resources */,
 				151B4E36256F9E9E00FE5F4F /* Roboto-LightItalic.ttf in Resources */,
 				00889D862428903700CDBDCC /* Main.storyboard in Resources */,
+				1561E6DD257A9FAB002C25C5 /* ProductViewController.xib in Resources */,
 				151B4E3C256F9E9E00FE5F4F /* Roboto-Black.ttf in Resources */,
 				5DD9884C218FDCAE006342F0 /* LaunchScreen.storyboard in Resources */,
 				1570C25E25755D35007685BA /* PlayerCollectionViewCell.xib in Resources */,
@@ -1012,6 +1027,7 @@
 				154C302E24FE5E1000D52FEF /* ArrayResponse.swift in Sources */,
 				15A41B902510D5BD00EC4945 /* AlertUtils.swift in Sources */,
 				152133592576536D005F98A6 /* CartSizeCollectionViewCell.swift in Sources */,
+				1561E6DC257A9FAB002C25C5 /* ProductViewController.swift in Sources */,
 				009A31832428C78E0012CF30 /* TokenUtils.swift in Sources */,
 				1501546A256F450300F360C6 /* CartView.swift in Sources */,
 				15D6B20F2505DB88006D3F24 /* SecurityUtils.swift in Sources */,

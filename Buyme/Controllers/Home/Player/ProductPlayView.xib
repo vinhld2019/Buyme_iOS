@@ -25,6 +25,7 @@
                 <outlet property="categoryLabel" destination="xgV-MT-6rY" id="KPM-le-YlH"/>
                 <outlet property="commentsLabel" destination="agh-qt-tuP" id="MtU-iO-TQM"/>
                 <outlet property="descriptionLabel" destination="3xx-Ze-F9S" id="an8-AI-QQK"/>
+                <outlet property="followImageView" destination="Q3o-7K-T92" id="p0o-SV-ox9"/>
                 <outlet property="heartLabel" destination="1d2-o7-Mqz" id="V17-uu-xyO"/>
                 <outlet property="nameLabel" destination="aQa-0D-79N" id="wHD-aX-jHc"/>
                 <outlet property="player" destination="lUT-IT-VZ4" id="13H-S6-otb"/>
@@ -423,23 +424,46 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShopPlus" translatesAutoresizingMaskIntoConstraints="NO" id="Q3o-7K-T92">
+                                    <rect key="frame" x="39" y="14" width="12" height="12"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="O3w-f9-elX"/>
+                                        <constraint firstAttribute="width" constant="12" id="ygB-nf-OqC"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBU-gT-uag">
+                                    <rect key="frame" x="5" y="0.0" width="46" height="40"/>
+                                    <connections>
+                                        <action selector="follow:" destination="-1" eventType="touchUpInside" id="OpS-Qg-XPa"/>
+                                    </connections>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vinh LD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S9-XZ-vTm" customClass="Label" customModule="BUY_ME" customModuleProvider="target">
-                                    <rect key="frame" x="50" y="0.0" width="284" height="40"/>
+                                    <rect key="frame" x="55" y="0.0" width="279" height="40"/>
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-m9-w0H">
+                                    <rect key="frame" x="154" y="4.6666666666666288" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="3S9-XZ-vTm" secondAttribute="bottom" id="3Wg-5U-pSh"/>
+                                <constraint firstItem="FBU-gT-uag" firstAttribute="bottom" secondItem="Djx-eG-OA3" secondAttribute="bottom" id="4iy-0l-T5z"/>
+                                <constraint firstItem="Q3o-7K-T92" firstAttribute="centerY" secondItem="Djx-eG-OA3" secondAttribute="centerY" id="5U1-ZN-9Yk"/>
                                 <constraint firstAttribute="height" constant="40" id="7MH-Kx-M55"/>
+                                <constraint firstItem="FBU-gT-uag" firstAttribute="leading" secondItem="Djx-eG-OA3" secondAttribute="leading" id="BX6-zx-ZUy"/>
                                 <constraint firstItem="Djx-eG-OA3" firstAttribute="top" secondItem="Fms-52-2fZ" secondAttribute="top" id="Ca6-jZ-HLx"/>
+                                <constraint firstItem="FBU-gT-uag" firstAttribute="top" secondItem="Djx-eG-OA3" secondAttribute="top" id="Kdd-dJ-lc9"/>
                                 <constraint firstAttribute="trailing" secondItem="3S9-XZ-vTm" secondAttribute="trailing" constant="5" id="QDH-0D-nlh"/>
-                                <constraint firstItem="3S9-XZ-vTm" firstAttribute="leading" secondItem="Djx-eG-OA3" secondAttribute="trailing" constant="5" id="Vgk-CI-yhv"/>
+                                <constraint firstItem="3S9-XZ-vTm" firstAttribute="leading" secondItem="Djx-eG-OA3" secondAttribute="trailing" constant="10" id="Vgk-CI-yhv"/>
                                 <constraint firstItem="Djx-eG-OA3" firstAttribute="leading" secondItem="Fms-52-2fZ" secondAttribute="leading" constant="5" id="cQx-bH-vyQ"/>
                                 <constraint firstAttribute="bottom" secondItem="Djx-eG-OA3" secondAttribute="bottom" id="fGB-rE-mUP"/>
                                 <constraint firstItem="3S9-XZ-vTm" firstAttribute="top" secondItem="Fms-52-2fZ" secondAttribute="top" id="iAT-bL-QoI"/>
+                                <constraint firstItem="FBU-gT-uag" firstAttribute="trailing" secondItem="Q3o-7K-T92" secondAttribute="trailing" id="tql-bY-hnC"/>
+                                <constraint firstItem="Q3o-7K-T92" firstAttribute="centerX" secondItem="Djx-eG-OA3" secondAttribute="trailing" id="yZq-NJ-nz9"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luật sư Trump muốn nghị viện Georgia tự chọn đại cử tri" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-0D-79N" customClass="Label" customModule="BUY_ME" customModuleProvider="target">
@@ -476,6 +500,9 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-7s-rTk">
                             <rect key="frame" x="5" y="45" width="329" height="35"/>
+                            <connections>
+                                <action selector="gotoProduct:" destination="-1" eventType="touchUpInside" id="Hee-fJ-ZiT"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -536,6 +563,7 @@
         <image name="PostMessage" width="24.333333969116211" height="24.333333969116211"/>
         <image name="PostShare" width="24.666666030883789" height="22.666666030883789"/>
         <image name="PostStar" width="16" height="15.333333015441895"/>
+        <image name="ShopPlus" width="12" height="12"/>
         <image name="Untitled" width="606" height="580"/>
     </resources>
 </document>
