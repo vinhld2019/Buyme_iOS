@@ -15,8 +15,6 @@ class PlayerCollectionViewCell: UICollectionViewCell {
     var product: Product? {
         didSet {
             playView.setVideo(link: product?.video)
-            playView.name = product?.name
-            playView.detail = product?.description
         }
     }
     

@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    @IBOutlet weak var contentView: UIView!
     var tabsView: UIView = .init()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var followingButton: UIButton!
@@ -37,10 +38,78 @@ class HomeViewController: BaseViewController {
             button.setTitleColor(.init(rgb: 0xFFFFFF, alpha: button.tag == sender.tag ? 1 : 0.8), for: .normal)
         }
     }
+    
+    @IBAction func panDirection(_ pan: UIPanGestureRecognizer) {
+        let locationPoint = pan.location(in: self.contentView)
+        let x = contentView.frame.origin.x
+        let width = contentView.frame.size.width
+        
+        switch pan.state {
+        case .began:
+            startX = locationPoint.x
+            
+        case .changed:
+            let xChanged = locationPoint.x - startX
+            var newX = x + xChanged
+            if newX > 0 { newX = 0 }
+            if newX < -width / 2 { newX = -width / 2 }
+            contentView.frame.origin.x = newX
+            
+        case .cancelled:
+            childHandler()
+            
+        case .failed:
+            childHandler()
+            
+        case .ended:
+            if (childShowing && x > -width / 2)
+                || (!childShowing && x < 0) {
+                childShowing = !childShowing
+                childHandler()
+            }
+            
+        default:
+            break
+        }
+    }
+    
+    private func childHandler() {
+        if childShowing {
+            currentCell?.pause()
+        } else {
+            playCurrentCell()
+        }
+        let x = childShowing ? -self.contentView.frame.size.width / 2 : 0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.contentView.frame.origin.x = x
+        }, completion: { _ in
+            self.contentView.frame.origin.x = x
+        })
+    }
+    
+    var childShowing: Bool = false
+    var startX: CGFloat = 0
+    var panDirection: Int = 0
+    var shopViewController: ShopViewController = .init()
 
     override func viewDidLoad() {
         tabBarController?.tabBar.barTintColor = .black
         super.viewDidLoad()
+        
+        addChild()
+        DispatchQueue.main.async {
+            self.playCurrentCell()
+        }
+    }
+    
+    private func addChild() {
+        addChild(shopViewController)
+        shopViewController.didMove(toParent: self)
+        self.contentView.addSubview(shopViewController.view)
+        var frame = contentView.bounds
+        frame.size.width /= 2
+        frame.origin.x = frame.size.width
+        shopViewController.view.frame = frame
     }
     
     private func addTabsView() {
@@ -59,17 +128,14 @@ class HomeViewController: BaseViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         tabBarController?.tabBar.barTintColor = .white
-        if let cell = collectionView.visibleCells.first as? PlayerCollectionViewCell {
-            cell.pause()
-        }
+        currentCell?.pause()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tabBarController?.tabBar.barTintColor = .black
-        if let cell = collectionView.visibleCells.first as? PlayerCollectionViewCell {
-            cell.play()
-        }
+        
+        playCurrentCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +146,14 @@ class HomeViewController: BaseViewController {
     @objc func touchUpInSide(_ sender: UIButton) {
         Mics.shared.log("Touch")
         sender.setTitle(DeviceUtils.shared.wifiIPAddress, for: .normal)
+    }
+    
+    var currentCell: PlayerCollectionViewCell? {
+        collectionView.visibleCells.first as? PlayerCollectionViewCell
+    }
+    
+    func playCurrentCell() {
+        currentCell?.play()
     }
 
 }
@@ -101,13 +175,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         if let cell = cell as? PlayerCollectionViewCell {
             cell.pause()
         }
-        if let cell = collectionView.visibleCells.first as? PlayerCollectionViewCell {
-            cell.play()
-        }
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
+        playCurrentCell()
     }
 }
 
@@ -119,9 +187,6 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = PlayerCollectionViewCell.cell(for: collectionView, at: indexPath) {
             cell.product = products[indexPath.row]
-            if indexPath.row == 0 {
-                cell.playView.play()
-            }
             return cell
         }
         

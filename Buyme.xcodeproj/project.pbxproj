@@ -88,6 +88,9 @@
 		154C302A24FE5D5D00D52FEF /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C302924FE5D5D00D52FEF /* BaseResponse.swift */; };
 		154C302C24FE5DAE00D52FEF /* SingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C302B24FE5DAE00D52FEF /* SingleResponse.swift */; };
 		154C302E24FE5E1000D52FEF /* ArrayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C302D24FE5E1000D52FEF /* ArrayResponse.swift */; };
+		1561E6D3257A7100002C25C5 /* ProductPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561E6D2257A7100002C25C5 /* ProductPlayView.xib */; };
+		1561E6D7257A8DB2002C25C5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1561E6D5257A8DB2002C25C5 /* ShopViewController.swift */; };
+		1561E6D8257A8DB2002C25C5 /* ShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561E6D6257A8DB2002C25C5 /* ShopViewController.xib */; };
 		1565489324FE65DE00588E4B /* WindowUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565489224FE65DE00588E4B /* WindowUtils.swift */; };
 		1570C2402575106B007685BA /* ProductPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570C23F2575106B007685BA /* ProductPlayView.swift */; };
 		1570C24825751089007685BA /* SearchWithCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1570C24225751089007685BA /* SearchWithCategoriesViewController.xib */; };
@@ -221,6 +224,9 @@
 		154C302924FE5D5D00D52FEF /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		154C302B24FE5DAE00D52FEF /* SingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleResponse.swift; sourceTree = "<group>"; };
 		154C302D24FE5E1000D52FEF /* ArrayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayResponse.swift; sourceTree = "<group>"; };
+		1561E6D2257A7100002C25C5 /* ProductPlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductPlayView.xib; sourceTree = "<group>"; };
+		1561E6D5257A8DB2002C25C5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		1561E6D6257A8DB2002C25C5 /* ShopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopViewController.xib; sourceTree = "<group>"; };
 		1565489124FE654000588E4B /* Buyme-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Buyme-Bridging-Header.h"; sourceTree = "<group>"; };
 		1565489224FE65DE00588E4B /* WindowUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowUtils.swift; sourceTree = "<group>"; };
 		1570C23F2575106B007685BA /* ProductPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPlayView.swift; sourceTree = "<group>"; };
@@ -391,6 +397,7 @@
 		009A2FEC2428C78D0012CF30 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1561E6D4257A8DA4002C25C5 /* Shop */,
 				151B4E05256F5E0700FE5F4F /* User */,
 				1570C24125751089007685BA /* SearchWithCategoríe */,
 				151B4E00256F5D3D00FE5F4F /* CreateNew */,
@@ -523,6 +530,15 @@
 			path = Quantity;
 			sourceTree = "<group>";
 		};
+		1561E6D4257A8DA4002C25C5 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				1561E6D5257A8DB2002C25C5 /* ShopViewController.swift */,
+				1561E6D6257A8DB2002C25C5 /* ShopViewController.xib */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		1570C24125751089007685BA /* SearchWithCategoríe */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				1570C23F2575106B007685BA /* ProductPlayView.swift */,
+				1561E6D2257A7100002C25C5 /* ProductPlayView.xib */,
 				1544627625764D81005D08F2 /* Cells */,
 				1544627725764E00005D08F2 /* Views */,
 			);
@@ -834,6 +851,7 @@
 				1521337125765FB0005F98A6 /* 91499447547729099884.mp4 in Resources */,
 				1521337225765FB0005F98A6 /* 91555661403983710301.mp4 in Resources */,
 				1521335C25765ED2005F98A6 /* 18065816251741380939.mp4 in Resources */,
+				1561E6D8257A8DB2002C25C5 /* ShopViewController.xib in Resources */,
 				151B4E34256F9E9E00FE5F4F /* Roboto-ThinItalic.ttf in Resources */,
 				A967DB9D2572C42C00EAC002 /* CartItemTableViewCell.xib in Resources */,
 				151B4E35256F9E9E00FE5F4F /* Roboto-BoldItalic.ttf in Resources */,
@@ -863,6 +881,7 @@
 				151B4E4E256FC01200FE5F4F /* ShopForYouCollectionViewCell.xib in Resources */,
 				151B4E33256F9E9E00FE5F4F /* Roboto-MediumItalic.ttf in Resources */,
 				151B4E3A256F9E9E00FE5F4F /* Roboto-Bold.ttf in Resources */,
+				1561E6D3257A7100002C25C5 /* ProductPlayView.xib in Resources */,
 				5DD98849218FDCAE006342F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -952,6 +971,7 @@
 				009A31952428C78E0012CF30 /* UserDefaultsUtils.swift in Sources */,
 				15015468256F42FD00F360C6 /* TabBarViewController.swift in Sources */,
 				151B4E44256FB52F00FE5F4F /* ProductsForYouCollectionViewCell.swift in Sources */,
+				1561E6D7257A8DB2002C25C5 /* ShopViewController.swift in Sources */,
 				1570C24A25751089007685BA /* ProductCollectionViewCell.swift in Sources */,
 				009A31942428C78E0012CF30 /* KeychainUtils.swift in Sources */,
 				1544627A25764E75005D08F2 /* QuantityView.swift in Sources */,

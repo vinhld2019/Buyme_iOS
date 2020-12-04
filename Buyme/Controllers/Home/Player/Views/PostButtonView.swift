@@ -19,7 +19,7 @@ class PostButtonView: BaseView {
     var imageView: UIImageView = .init()
     var label: Label = .init()
     
-    var text: String? {
+    @IBInspectable var text: String? {
         get { label.text }
         set {
             DispatchQueue.main.async {
@@ -28,7 +28,7 @@ class PostButtonView: BaseView {
         }
     }
     
-    var image: UIImage? {
+    @IBInspectable var image: UIImage? {
         get { imageView.image }
         set {
             DispatchQueue.main.async {

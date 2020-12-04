@@ -132,8 +132,33 @@ extension UIView {
             return self.layer.cornerRadius
         }
         set {
-            self.layer.cornerRadius = newValue
-            self.clipsToBounds = newValue > 0
+            DispatchQueue.main.async {
+                self.layer.cornerRadius = newValue
+                self.clipsToBounds = newValue > 0
+            }
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return .init(cgColor: color)
+            }
+            return  nil
+        }
+        set {
+            DispatchQueue.main.async {
+                self.layer.borderColor = newValue?.cgColor
+            }
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get { return layer.borderWidth }
+        set {
+            DispatchQueue.main.async {
+                self.layer.borderWidth = newValue
+            }
         }
     }
 }

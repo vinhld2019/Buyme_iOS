@@ -13,9 +13,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Buyme" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BUY_ME" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="50k-7D-YIw" id="0NO-Xz-c0R"/>
+                <outlet property="contentView" destination="BbN-zu-ucP" id="Mwr-YH-ore"/>
                 <outlet property="followingButton" destination="wkN-zx-BNZ" id="46b-6o-X1D"/>
                 <outlet property="suggestingButton" destination="eBE-bd-wGg" id="yJy-oW-gVL"/>
                 <outlet property="trendingButton" destination="jmq-SV-I8Q" id="eSY-7P-dvw"/>
@@ -27,112 +28,145 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="50k-7D-YIw">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G2L-SV-sRq">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-bb-Vih">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-zu-ucP">
+                    <rect key="frame" x="0.0" y="44" width="828" height="818"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkN-zx-BNZ">
-                            <rect key="frame" x="10" y="44" width="124" height="60"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSG-yb-q1Y">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="50k-7D-YIw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G2L-SV-sRq">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-bb-Vih">
+                                    <rect key="frame" x="0.0" y="-100" width="414" height="160"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkN-zx-BNZ">
+                                            <rect key="frame" x="10" y="100" width="124" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="HZP-6q-ue8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                            <state key="normal" title="Following">
+                                                <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="zac-eS-yp3"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJe-pn-Wgb">
+                                            <rect key="frame" x="135" y="125" width="3" height="10"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="Hc0-Xa-Xmc"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBE-bd-wGg">
+                                            <rect key="frame" x="139" y="100" width="145.5" height="60"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                            <state key="normal" title="Suggesting">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="neU-9f-aNT"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgI-72-NXs">
+                                            <rect key="frame" x="285.5" y="125" width="3" height="10"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="emv-AV-2cD"/>
+                                                <constraint firstAttribute="width" constant="3" id="p6u-1v-U9H"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-SV-I8Q">
+                                            <rect key="frame" x="289.5" y="100" width="114.5" height="60"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                            <state key="normal" title="Trending">
+                                                <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="r2x-qu-VdL"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="jmq-SV-I8Q" firstAttribute="width" secondItem="eBE-bd-wGg" secondAttribute="width" multiplier="0.789474" id="0Hd-L4-nsl"/>
+                                        <constraint firstItem="zgI-72-NXs" firstAttribute="centerY" secondItem="dJe-pn-Wgb" secondAttribute="centerY" id="32H-IP-OAi"/>
+                                        <constraint firstAttribute="bottom" secondItem="jmq-SV-I8Q" secondAttribute="bottom" id="87l-O3-3cs"/>
+                                        <constraint firstAttribute="trailing" secondItem="jmq-SV-I8Q" secondAttribute="trailing" constant="10" id="Aco-A4-T7H"/>
+                                        <constraint firstAttribute="bottom" secondItem="eBE-bd-wGg" secondAttribute="bottom" id="Ezg-YJ-Bfo"/>
+                                        <constraint firstItem="zgI-72-NXs" firstAttribute="leading" secondItem="eBE-bd-wGg" secondAttribute="trailing" constant="1" id="F4G-q1-ooP"/>
+                                        <constraint firstItem="jmq-SV-I8Q" firstAttribute="height" secondItem="eBE-bd-wGg" secondAttribute="height" id="JBu-sB-FGY"/>
+                                        <constraint firstItem="dJe-pn-Wgb" firstAttribute="centerY" secondItem="wkN-zx-BNZ" secondAttribute="centerY" id="Lie-1d-yZb"/>
+                                        <constraint firstItem="jmq-SV-I8Q" firstAttribute="leading" secondItem="eBE-bd-wGg" secondAttribute="trailing" constant="5" id="WGf-Et-Oq4"/>
+                                        <constraint firstItem="wkN-zx-BNZ" firstAttribute="leading" secondItem="zaX-bb-Vih" secondAttribute="leading" constant="10" id="ZRT-Tt-Ufk"/>
+                                        <constraint firstItem="eBE-bd-wGg" firstAttribute="width" secondItem="wkN-zx-BNZ" secondAttribute="width" multiplier="1.16923" id="b8r-jF-hzJ"/>
+                                        <constraint firstItem="dJe-pn-Wgb" firstAttribute="leading" secondItem="wkN-zx-BNZ" secondAttribute="trailing" constant="1" id="c8U-mY-jhf"/>
+                                        <constraint firstItem="eBE-bd-wGg" firstAttribute="height" secondItem="wkN-zx-BNZ" secondAttribute="height" id="hKN-P1-1PP"/>
+                                        <constraint firstAttribute="bottom" secondItem="wkN-zx-BNZ" secondAttribute="bottom" id="p1P-pZ-ouF"/>
+                                        <constraint firstItem="dJe-pn-Wgb" firstAttribute="trailing" secondItem="eBE-bd-wGg" secondAttribute="leading" constant="-1" id="xAd-Lt-bxP"/>
+                                        <constraint firstItem="eBE-bd-wGg" firstAttribute="leading" secondItem="wkN-zx-BNZ" secondAttribute="trailing" constant="5" id="xPu-XK-9ZN"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="HZP-6q-ue8"/>
+                                <constraint firstItem="zaX-bb-Vih" firstAttribute="top" secondItem="mSG-yb-q1Y" secondAttribute="top" constant="-100" id="3dx-cQ-zSa"/>
+                                <constraint firstAttribute="top" secondItem="zaX-bb-Vih" secondAttribute="bottom" constant="-60" id="5RS-eO-64c"/>
+                                <constraint firstAttribute="bottom" secondItem="50k-7D-YIw" secondAttribute="bottom" id="9S6-iT-Q7J"/>
+                                <constraint firstAttribute="trailing" secondItem="zaX-bb-Vih" secondAttribute="trailing" id="DmD-WR-5GF"/>
+                                <constraint firstItem="50k-7D-YIw" firstAttribute="top" secondItem="mSG-yb-q1Y" secondAttribute="top" id="F54-yQ-hsJ"/>
+                                <constraint firstItem="50k-7D-YIw" firstAttribute="leading" secondItem="mSG-yb-q1Y" secondAttribute="leading" id="cIN-OX-HKK"/>
+                                <constraint firstItem="zaX-bb-Vih" firstAttribute="leading" secondItem="mSG-yb-q1Y" secondAttribute="leading" id="qmd-n0-hrL"/>
+                                <constraint firstAttribute="trailing" secondItem="50k-7D-YIw" secondAttribute="trailing" id="yoy-1H-b4F"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                            <state key="normal" title="Following">
-                                <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="zac-eS-yp3"/>
-                            </connections>
-                        </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJe-pn-Wgb">
-                            <rect key="frame" x="135" y="69" width="3" height="10"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="10" id="Hc0-Xa-Xmc"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                         </view>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBE-bd-wGg">
-                            <rect key="frame" x="139" y="44" width="145.5" height="60"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                            <state key="normal" title="Suggesting">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="neU-9f-aNT"/>
-                            </connections>
-                        </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgI-72-NXs">
-                            <rect key="frame" x="285.5" y="69" width="3" height="10"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="10" id="emv-AV-2cD"/>
-                                <constraint firstAttribute="width" constant="3" id="p6u-1v-U9H"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-SV-I8Q">
-                            <rect key="frame" x="289.5" y="44" width="114.5" height="60"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                            <state key="normal" title="Trending">
-                                <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="r2x-qu-VdL"/>
-                            </connections>
-                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="jmq-SV-I8Q" firstAttribute="width" secondItem="eBE-bd-wGg" secondAttribute="width" multiplier="0.789474" id="0Hd-L4-nsl"/>
-                        <constraint firstItem="zgI-72-NXs" firstAttribute="centerY" secondItem="dJe-pn-Wgb" secondAttribute="centerY" id="32H-IP-OAi"/>
-                        <constraint firstAttribute="bottom" secondItem="jmq-SV-I8Q" secondAttribute="bottom" id="87l-O3-3cs"/>
-                        <constraint firstAttribute="trailing" secondItem="jmq-SV-I8Q" secondAttribute="trailing" constant="10" id="Aco-A4-T7H"/>
-                        <constraint firstAttribute="bottom" secondItem="eBE-bd-wGg" secondAttribute="bottom" id="Ezg-YJ-Bfo"/>
-                        <constraint firstItem="zgI-72-NXs" firstAttribute="leading" secondItem="eBE-bd-wGg" secondAttribute="trailing" constant="1" id="F4G-q1-ooP"/>
-                        <constraint firstItem="jmq-SV-I8Q" firstAttribute="height" secondItem="eBE-bd-wGg" secondAttribute="height" id="JBu-sB-FGY"/>
-                        <constraint firstItem="dJe-pn-Wgb" firstAttribute="centerY" secondItem="wkN-zx-BNZ" secondAttribute="centerY" id="Lie-1d-yZb"/>
-                        <constraint firstItem="jmq-SV-I8Q" firstAttribute="leading" secondItem="eBE-bd-wGg" secondAttribute="trailing" constant="5" id="WGf-Et-Oq4"/>
-                        <constraint firstItem="wkN-zx-BNZ" firstAttribute="leading" secondItem="zaX-bb-Vih" secondAttribute="leading" constant="10" id="ZRT-Tt-Ufk"/>
-                        <constraint firstItem="eBE-bd-wGg" firstAttribute="width" secondItem="wkN-zx-BNZ" secondAttribute="width" multiplier="1.16923" id="b8r-jF-hzJ"/>
-                        <constraint firstItem="dJe-pn-Wgb" firstAttribute="leading" secondItem="wkN-zx-BNZ" secondAttribute="trailing" constant="1" id="c8U-mY-jhf"/>
-                        <constraint firstItem="eBE-bd-wGg" firstAttribute="height" secondItem="wkN-zx-BNZ" secondAttribute="height" id="hKN-P1-1PP"/>
-                        <constraint firstAttribute="bottom" secondItem="wkN-zx-BNZ" secondAttribute="bottom" id="p1P-pZ-ouF"/>
-                        <constraint firstItem="dJe-pn-Wgb" firstAttribute="trailing" secondItem="eBE-bd-wGg" secondAttribute="leading" constant="-1" id="xAd-Lt-bxP"/>
-                        <constraint firstItem="eBE-bd-wGg" firstAttribute="leading" secondItem="wkN-zx-BNZ" secondAttribute="trailing" constant="5" id="xPu-XK-9ZN"/>
+                        <constraint firstItem="mSG-yb-q1Y" firstAttribute="top" secondItem="BbN-zu-ucP" secondAttribute="top" id="01F-Lb-D3A"/>
+                        <constraint firstItem="mSG-yb-q1Y" firstAttribute="leading" secondItem="BbN-zu-ucP" secondAttribute="leading" id="871-OS-GV4"/>
+                        <constraint firstAttribute="bottom" secondItem="mSG-yb-q1Y" secondAttribute="bottom" id="OTM-ye-4GG"/>
+                        <constraint firstItem="mSG-yb-q1Y" firstAttribute="width" secondItem="BbN-zu-ucP" secondAttribute="width" multiplier="0.5" id="Olc-26-DSU"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="eCz-Xr-r75" appends="YES" id="9yj-9o-oRU"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="50k-7D-YIw" secondAttribute="bottom" id="4xQ-Nf-G0i"/>
-                <constraint firstItem="50k-7D-YIw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7vM-2B-g5b"/>
-                <constraint firstItem="zaX-bb-Vih" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="91n-Ny-mNS"/>
-                <constraint firstItem="zaX-bb-Vih" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DEO-Mk-Zyr"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zaX-bb-Vih" secondAttribute="trailing" id="N5B-Sj-ty0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="50k-7D-YIw" secondAttribute="trailing" id="U2j-nP-Vnp"/>
-                <constraint firstItem="zaX-bb-Vih" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="dd8-58-zFn"/>
-                <constraint firstItem="50k-7D-YIw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hoG-dg-rIo"/>
+                <constraint firstItem="BbN-zu-ucP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="2" id="KYZ-YX-WoE"/>
+                <constraint firstItem="BbN-zu-ucP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aRz-s5-hhb"/>
+                <constraint firstItem="BbN-zu-ucP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kle-J3-R7w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BbN-zu-ucP" secondAttribute="bottom" id="y2E-6R-UQh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="eCz-Xr-r75">
+            <connections>
+                <action selector="panDirection:" destination="-1" id="Rnc-fw-zNH"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
 </document>
