@@ -1,5 +1,5 @@
 //
-//  Quantity.swift
+//  QuantityView.swift
 //  Buyme
 //
 //  Created by Vinh LD on 12/1/20.
@@ -8,14 +8,40 @@
 
 import UIKit
 
-class Quantity: UIView {
+class QuantityView: FromNibBaseView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var textField: TextField!
+    
+    @IBAction func quantityChange(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            if quantity > 0 {
+                quantity -= 1
+            }
+        default:
+            quantity += 1
+        }
     }
-    */
+    
+    var quantity: Int = 1 {
+        didSet {
+            textField.text = "\(quantity)"
+        }
+    }
+    
+    override func initViews() {
+        super.initViews()
+        textField.delegate = self
+    }
 
+}
+
+extension QuantityView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        endEditing(true)
+        if let text = textField.text, let quantity = Int(text) {
+            self.quantity = quantity
+        }
+        return true
+    }
 }

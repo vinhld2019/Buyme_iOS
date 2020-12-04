@@ -11,8 +11,8 @@ import UIKit
 class TabBarViewController: UITabBarController {
     
     private let titles: [String] = ["Home", "Search", "Cart", "User"]
-    private let itemsImage: [String] = ["TBIHome", "TBISearch", "TBICart", ""]
-    private let selectedItemsImage: [String] = ["TBISelectedHome", "TBISelectedSearch", "TBISelectedCart", ""]
+    private let itemsImage: [String] = ["TBIHome", "TBISearch", "TBICart", "TBIUser"]
+    private let selectedItemsImage: [String] = ["TBISelectedHome", "TBISelectedSearch", "TBISelectedCart", "TBISelectedUser"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

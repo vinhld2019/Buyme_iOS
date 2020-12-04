@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DI-fK-Ve9">
-                    <rect key="frame" x="0.0" y="492" width="414" height="504"/>
+                    <rect key="frame" x="0.0" y="527" width="414" height="469"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LS-ke-bxe">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -97,7 +97,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-9T-fyM">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-9T-fyM">
                                     <rect key="frame" x="10" y="30" width="394" height="40"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JOq-RN-17T">
@@ -142,7 +142,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-nH-rJn">
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-nH-rJn">
                                     <rect key="frame" x="10" y="30" width="394" height="40"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c4h-hl-Wbr">
@@ -176,19 +176,23 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WP1-bM-aXy">
-                            <rect key="frame" x="0.0" y="240" width="414" height="80"/>
+                            <rect key="frame" x="0.0" y="240" width="414" height="45"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-eE-pKb">
-                                    <rect key="frame" x="10" y="0.0" width="394" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="z7j-tm-BN3"/>
-                                    </constraints>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-eE-pKb">
+                                    <rect key="frame" x="10" y="0.0" width="229" height="40"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G1-Rx-tHB" customClass="QuantityView" customModule="Buyme" customModuleProvider="target">
+                                    <rect key="frame" x="254" y="0.0" width="150" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="KL8-C5-f0U"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-Zm-lQP">
-                                    <rect key="frame" x="0.0" y="75" width="414" height="5"/>
+                                    <rect key="frame" x="0.0" y="40" width="414" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="9fI-aa-PWE"/>
@@ -198,16 +202,20 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="VOQ-Zm-lQP" secondAttribute="trailing" id="I6d-tz-kcs"/>
+                                <constraint firstAttribute="bottom" secondItem="4G1-Rx-tHB" secondAttribute="bottom" constant="5" id="J14-Qc-Veh"/>
                                 <constraint firstItem="Erb-eE-pKb" firstAttribute="top" secondItem="WP1-bM-aXy" secondAttribute="top" id="Pva-4e-hIV"/>
                                 <constraint firstItem="VOQ-Zm-lQP" firstAttribute="leading" secondItem="WP1-bM-aXy" secondAttribute="leading" id="RDc-HE-wss"/>
+                                <constraint firstAttribute="trailing" secondItem="4G1-Rx-tHB" secondAttribute="trailing" constant="10" id="WxX-ah-nhL"/>
                                 <constraint firstAttribute="bottom" secondItem="VOQ-Zm-lQP" secondAttribute="bottom" id="Y9K-h5-CTB"/>
                                 <constraint firstItem="Erb-eE-pKb" firstAttribute="leading" secondItem="WP1-bM-aXy" secondAttribute="leading" constant="10" id="cWi-cc-YK2"/>
-                                <constraint firstAttribute="trailing" secondItem="Erb-eE-pKb" secondAttribute="trailing" constant="10" id="eUl-Tw-e11"/>
-                                <constraint firstAttribute="height" constant="80" id="lGb-0y-NDT"/>
+                                <constraint firstAttribute="height" constant="45" id="lGb-0y-NDT"/>
+                                <constraint firstItem="VOQ-Zm-lQP" firstAttribute="top" secondItem="Erb-eE-pKb" secondAttribute="bottom" id="qRR-FA-di7"/>
+                                <constraint firstItem="4G1-Rx-tHB" firstAttribute="top" secondItem="WP1-bM-aXy" secondAttribute="top" id="tpf-PD-CcB"/>
+                                <constraint firstItem="4G1-Rx-tHB" firstAttribute="leading" secondItem="Erb-eE-pKb" secondAttribute="trailing" constant="15" id="w7T-p6-MlQ"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbw-pI-z2a">
-                            <rect key="frame" x="0.0" y="320" width="241" height="50"/>
+                            <rect key="frame" x="0.0" y="285" width="207" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Saq-Ta-i1d"/>
                             </constraints>
@@ -215,9 +223,12 @@
                             <state key="normal" title="Thêm vào giỏ">
                                 <color key="titleColor" red="0.98431372549999996" green="0.73725490199999999" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="addToCart:" destination="-1" eventType="touchUpInside" id="jac-Jl-yNE"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek2-g3-Tz6">
-                            <rect key="frame" x="241" y="320" width="173" height="50"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek2-g3-Tz6">
+                            <rect key="frame" x="207" y="285" width="207" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="dB1-Fa-Ppe"/>
                             </constraints>
@@ -225,13 +236,16 @@
                             <state key="normal" title="Mua ngay">
                                 <color key="titleColor" red="0.98431372549999996" green="0.73725490199999999" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="addToCart:" destination="-1" eventType="touchUpInside" id="UMa-Vm-HPv"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="ek2-g3-Tz6" secondAttribute="trailing" id="0VR-Oj-ExJ"/>
                         <constraint firstAttribute="trailing" secondItem="WP1-bM-aXy" secondAttribute="trailing" id="87y-aY-EtV"/>
-                        <constraint firstItem="Jbw-pI-z2a" firstAttribute="width" secondItem="ek2-g3-Tz6" secondAttribute="width" multiplier="1.39394" id="9ef-5Q-GSr"/>
+                        <constraint firstItem="Jbw-pI-z2a" firstAttribute="width" secondItem="ek2-g3-Tz6" secondAttribute="width" id="9ef-5Q-GSr"/>
                         <constraint firstAttribute="trailing" secondItem="eUa-Gw-1Sc" secondAttribute="trailing" id="Eig-gC-ZFD"/>
                         <constraint firstItem="Jbw-pI-z2a" firstAttribute="leading" secondItem="4DI-fK-Ve9" secondAttribute="leading" id="Gg6-lJ-PGr"/>
                         <constraint firstItem="WP1-bM-aXy" firstAttribute="leading" secondItem="4DI-fK-Ve9" secondAttribute="leading" id="KWG-9u-v1a"/>

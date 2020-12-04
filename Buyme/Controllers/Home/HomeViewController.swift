@@ -17,6 +17,20 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var trendingButton: UIButton!
     
     private var tabs: [UIButton] { [followingButton, suggestingButton, trendingButton] }
+    var products: [Product] = [
+    .init(name: "18065816251741380939", video: "37322918484537068605", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "545063269024623444111", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "840845422251037567612", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "11872577020384669352", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "67482683536103484808", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "50896561048017056526", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "14733308977796058393", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "88933196843442697297", description: "18065816251741380939", cost: 1),
+    .init(name: "18065816251741380939", video: "863994649416865203210", description: "18065816251741380939", cost: 1),
+    .init(name: "91499447547729099884", video: "91499447547729099884", description: "91499447547729099884", cost: 1),
+    .init(name: "91555661403983710301", video: "91555661403983710301", description: "91555661403983710301", cost: 1),
+    .init(name: "18065816251741380939", video: "18065816251741380939", description: "18065816251741380939", cost: 1)
+    ]
     
     @IBAction func changeTab(_ sender: UIButton) {
         for button in tabs {
@@ -40,23 +54,28 @@ class HomeViewController: BaseViewController {
         PlayerCollectionViewCell.register(collectionView)
         collectionView.delegate = self
         collectionView.dataSource = self
-//        followingView.setVideo(link: "https://v9-vn.tiktokcdn.com/574348b2bf83393a0ce3d73db33a52a5/5fc56e0a/video/tos/alisg/tos-alisg-pve-0037c001/52c28b666a454b73a9fd4dcd2ac26092/")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         tabBarController?.tabBar.barTintColor = .white
-//        followingView.player.pause()
+        if let cell = collectionView.visibleCells.first as? PlayerCollectionViewCell {
+            cell.pause()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         tabBarController?.tabBar.barTintColor = .black
-//        followingView.player.play()
+        if let cell = collectionView.visibleCells.first as? PlayerCollectionViewCell {
+            cell.play()
+        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.barTintColor = .black
+    }
     
     @objc func touchUpInSide(_ sender: UIButton) {
         Mics.shared.log("Touch")
@@ -79,10 +98,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print(indexPath.row)
-        for cell in collectionView.visibleCells {
-            let indexPath = collectionView.indexPath(for: cell)
-            print(indexPath?.row)
+        if let cell = cell as? PlayerCollectionViewCell {
+            cell.pause()
+        }
+        if let cell = collectionView.visibleCells.first as? PlayerCollectionViewCell {
+            cell.play()
         }
     }
     
@@ -93,11 +113,15 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = PlayerCollectionViewCell.cell(for: collectionView, at: indexPath) {
+            cell.product = products[indexPath.row]
+            if indexPath.row == 0 {
+                cell.playView.play()
+            }
             return cell
         }
         

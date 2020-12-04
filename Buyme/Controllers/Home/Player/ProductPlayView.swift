@@ -8,8 +8,14 @@
 
 import UIKit
 import BMPlayer
+import SnapKit
 
 class ProductPlayView: BaseView {
+    
+    let kShareTag: Int = 0
+    let kCommentTag: Int = 1
+    let kHeartTag: Int = 2
+    let kCartTag: Int = 3
     
     var player: BMPlayer!
     var nameLabel: Label = .init()
@@ -23,6 +29,68 @@ class ProductPlayView: BaseView {
     var detail: String? {
         get { descriptionLabel.text }
         set { descriptionLabel.text = newValue }
+    }
+    
+    @objc func categoryTouchUpInside(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            AppUtils.shared.pushViewController(typeClass: SearchWithCategoriesViewController.self)
+            
+        default:
+            AppUtils.shared.pushViewController(typeClass: SearchWithCategoriesViewController.self)
+        }
+    }
+    
+    private func addCategory(superView: UIView, title: String, tag: Int, left: ConstraintItem) -> UIView {
+        let view: UIView = .init()
+        superView.addSubview(view)
+        view.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.height.equalTo(30)
+            make.left.equalTo(left).offset(10)
+        }
+        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.borderWidth = 1
+        view.cornerRadius = 2
+        let currentCatLabel = Label()
+        view.addSubview(currentCatLabel)
+        currentCatLabel.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.left.equalToSuperview().offset(15)
+            make.right.equalToSuperview().offset(-15)
+        }
+        currentCatLabel.font = Font.shared.bold?.withSize(13)
+        currentCatLabel.textColor = .white
+        currentCatLabel.text = title
+        
+        let button = UIButton()
+        button.tag = tag
+        view.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.top.right.bottom.left.equalToSuperview()
+        }
+        button.addTarget(self, action: #selector(categoryTouchUpInside(_:)), for: .touchUpInside)
+        
+        return view
+    }
+    
+    private func addButtonAction(superView: UIView, image: String, tag: Int = 0,
+                                 bottom: ConstraintItem, bottomOffest: CGFloat = -5,
+                                 height: CGFloat = 60, text: String? = "0") -> PostButtonView {
+        let view = PostButtonView.init()
+        superView.addSubview(view)
+        view.snp.makeConstraints { make in
+            make.right.equalToSuperview()
+            make.bottom.equalTo(bottom).offset(bottomOffest)
+            make.width.equalTo(60)
+            make.height.equalTo(height)
+        }
+        view.image = UIImage(named: image)
+        view.tag = tag
+        view.text = text
+        view.delegate = self
+        
+        return view
     }
     
     override func initViews() {
@@ -53,46 +121,8 @@ class ProductPlayView: BaseView {
             make.height.equalTo(60)
         }
         
-        let currentCatView: UIView = .init()
-        categoryView.addSubview(currentCatView)
-        currentCatView.snp.makeConstraints { make in
-            make.centerY.left.equalToSuperview()
-            make.height.equalTo(30)
-        }
-        currentCatView.layer.borderColor = ColorUtils.shared.appColor.cgColor
-        currentCatView.layer.borderWidth = 1
-        currentCatView.cornerRadius = 2
-        let currentCatLabel = Label()
-        currentCatView.addSubview(currentCatLabel)
-        currentCatLabel.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().offset(-10)
-        }
-        currentCatLabel.font = Font.shared.bold?.withSize(13)
-        currentCatLabel.textColor = ColorUtils.shared.appColor
-        currentCatLabel.text = "Thịt thỏ"
-        
-        let otherCatView: UIView = .init()
-        categoryView.addSubview(otherCatView)
-        otherCatView.snp.makeConstraints { make in
-            make.left.equalTo(currentCatView.snp.right).offset(10)
-            make.centerY.equalToSuperview()
-            make.height.equalTo(30)
-        }
-        otherCatView.layer.borderColor = ColorUtils.shared.appColor.cgColor
-        otherCatView.layer.borderWidth = 1
-        otherCatView.cornerRadius = 2
-        let otherCatLabel = Label()
-        otherCatView.addSubview(otherCatLabel)
-        otherCatLabel.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().offset(-10)
-        }
-        otherCatLabel.font = Font.shared.bold?.withSize(13)
-        otherCatLabel.textColor = ColorUtils.shared.appColor
-        otherCatLabel.text = "Thịt khác"
+        let currentCat = addCategory(superView: categoryView, title: "Thời Trang", tag: 0, left: categoryView.snp.left)
+        _ = addCategory(superView: categoryView, title: "Danh mục khác", tag: 1, left: currentCat.snp.right)
         
         let detailView = UIView()
         view.addSubview(detailView)
@@ -120,60 +150,40 @@ class ProductPlayView: BaseView {
         descriptionLabel.text = "Sáng 27-11, tại Hà Nội,Tổng Bí thư, Chủ tịch nước Nguyễn Phú Trọng dự và phát biểu chỉ đạo Hội nghị toàn quốc tổng kết công tác kiểm tra, giám sát nhiệm kỳ Đại hội XII của Đảng do Ban Bí thư tổ chức."
         descriptionLabel.numberOfLines = 0
         
-        let shareView = PostButtonView.init()
-        view.addSubview(shareView)
-        shareView.snp.makeConstraints { make in
-            make.right.bottom.equalTo(view)
-            make.width.height.equalTo(60)
-        }
-        shareView.image = UIImage(named: "PostShare")
-        shareView.text = "0"
-        shareView.tag = 0
-        shareView.delegate = self
+        let shareView = addButtonAction(superView: view, image: "PostShare", bottom: view.snp.bottom, bottomOffest: 0)
+        let commentView = addButtonAction(superView: view, image: "PostMessage", tag: kCommentTag, bottom: shareView.snp.top)
+        let heartView = addButtonAction(superView: view, image: "PostHeart", tag: kHeartTag, bottom: commentView.snp.top)
+        _ = addButtonAction(superView: view, image: "PostAddToCart", tag: kCartTag, bottom: heartView.snp.top, height: 40, text: nil)
         
-        let commentView = PostButtonView.init()
-        view.addSubview(commentView)
-        commentView.snp.makeConstraints { make in
-            make.right.equalToSuperview()
-            make.bottom.equalTo(shareView.snp.top).offset(-5)
-            make.width.height.equalTo(60)
-        }
-        commentView.image = UIImage(named: "PostMessage")
-        commentView.text = "0"
-        commentView.tag = 1
-        commentView.delegate = self
-        
-        let heartView = PostButtonView.init()
-        view.addSubview(heartView)
-        heartView.snp.makeConstraints { make in
-            make.right.equalToSuperview()
-            make.bottom.equalTo(commentView.snp.top).offset(-5)
-            make.width.height.equalTo(60)
-        }
-        heartView.image = UIImage(named: "PostHeart")
-        heartView.text = "0"
-        heartView.tag = 2
-        heartView.delegate = self
-        
-        let addCartView = PostButtonView.init()
-        view.addSubview(addCartView)
-        addCartView.snp.makeConstraints { make in
-            make.right.equalToSuperview()
-            make.bottom.equalTo(heartView.snp.top).offset(-5)
-            make.width.equalTo(60)
-            make.height.equalTo(40)
-        }
-        addCartView.image = UIImage(named: "PostAddToCart")
-        addCartView.tag = 3
-        addCartView.delegate = self
-        
+//        setVideo(link: "18065816251741380939")
+//        setVideo(link: "https://v16.tiktokcdn.com/cead4b93cb85c6c30bb257eeb2fd1a58/5fc65010/video/tos/alisg/tos-alisg-pve-0037c001/297ea804a28a46fcaba8afe223badc8a/")
     }
     
     func setVideo(link: String?) {
-        if let link = link, let url = URL(string: link) {
+        if let link = link, let path = Bundle.main.path(forResource: link, ofType: "mp4") {
+            let url = URL(fileURLWithPath: path)
             DispatchQueue.main.async {
                 self.player.setVideo(resource: .init(url: url))
+                self.player.pause()
             }
+        }
+//        if let link = link, let url = URL(string: link) {
+//            DispatchQueue.main.async {
+//                self.player.setVideo(resource: .init(url: url))
+//                self.player.pause()
+//            }
+//        }
+    }
+    
+    func play() {
+        DispatchQueue.main.async {
+            self.player.play()
+        }
+    }
+    
+    func pause() {
+        DispatchQueue.main.async {
+            self.player.pause()
         }
     }
     
@@ -186,9 +196,16 @@ extension ProductPlayView: PostButtonViewDelegate {
     func postButtonView(touchUpInsideAt view: PostButtonView) {
         let tag = view.tag
         switch tag {
-        case 2:
+        case kShareTag:
+            let vc = UIActivityViewController(activityItems: ["https://www.facebook.com/vnvinhld"], applicationActivities: nil)
+            AppUtils.shared.present(vc, animated: true)
+            
+        case kHeartTag:
             view.image = view.image?.withRenderingMode(.alwaysTemplate)
             view.imageView.tintColor = .red
+            
+        case kCartTag:
+            self.superSuperview.addToCartShow()
             
         default:
             break
