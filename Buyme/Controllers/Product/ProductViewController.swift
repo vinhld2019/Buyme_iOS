@@ -9,11 +9,28 @@
 import UIKit
 
 class ProductViewController: BaseViewController {
+    
+    @IBOutlet weak var header: ProductHeaderView!
+    
+    var product: Product?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        header.delegate = self
+        header.title = "Tên sản phẩm"
     }
 
+}
+
+extension ProductViewController: ProductHeaderViewDelegate {
+    func productHeader(_ view: ProductHeaderView, action: ProductHeaderViewAction) {
+        switch action {
+        case .left:
+            navigationController?.popViewController(animated: true)
+            
+        case .right:
+            print("Right")
+        }
+    }
 }
