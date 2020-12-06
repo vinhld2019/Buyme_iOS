@@ -73,6 +73,13 @@ class ProductPlayView: FromNibBaseView {
         followImageView.image = UIImage(named: "ShopFollowed")
     }
     
+    @IBAction func viewShop(_ sender: UIButton) {
+        print("View Shop")
+        if let vc = viewContainingController as? HomeViewController {
+            vc.viewShop()
+        }
+    }
+    
     func setVideo(link: String?) {
         if let link = link, let path = Bundle.main.path(forResource: link, ofType: "mp4") {
             let url = URL(fileURLWithPath: path)

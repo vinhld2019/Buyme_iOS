@@ -87,6 +87,11 @@ class HomeViewController: BaseViewController {
         })
     }
     
+    func viewShop() {
+        childShowing = true
+        childHandler()
+    }
+    
     var childShowing: Bool = false
     var startX: CGFloat = 0
     var panDirection: Int = 0

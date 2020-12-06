@@ -443,9 +443,11 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-m9-w0H">
-                                    <rect key="frame" x="154" y="4.6666666666666288" width="30" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-m9-w0H">
+                                    <rect key="frame" x="55" y="0.0" width="279" height="40"/>
+                                    <connections>
+                                        <action selector="viewShop:" destination="-1" eventType="touchUpInside" id="tNE-08-c1p"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -456,12 +458,16 @@
                                 <constraint firstAttribute="height" constant="40" id="7MH-Kx-M55"/>
                                 <constraint firstItem="FBU-gT-uag" firstAttribute="leading" secondItem="Djx-eG-OA3" secondAttribute="leading" id="BX6-zx-ZUy"/>
                                 <constraint firstItem="Djx-eG-OA3" firstAttribute="top" secondItem="Fms-52-2fZ" secondAttribute="top" id="Ca6-jZ-HLx"/>
+                                <constraint firstItem="Fbp-m9-w0H" firstAttribute="leading" secondItem="3S9-XZ-vTm" secondAttribute="leading" id="Hep-TP-Fqy"/>
                                 <constraint firstItem="FBU-gT-uag" firstAttribute="top" secondItem="Djx-eG-OA3" secondAttribute="top" id="Kdd-dJ-lc9"/>
                                 <constraint firstAttribute="trailing" secondItem="3S9-XZ-vTm" secondAttribute="trailing" constant="5" id="QDH-0D-nlh"/>
                                 <constraint firstItem="3S9-XZ-vTm" firstAttribute="leading" secondItem="Djx-eG-OA3" secondAttribute="trailing" constant="10" id="Vgk-CI-yhv"/>
+                                <constraint firstItem="Fbp-m9-w0H" firstAttribute="bottom" secondItem="3S9-XZ-vTm" secondAttribute="bottom" id="ZIh-bV-xCb"/>
+                                <constraint firstItem="Fbp-m9-w0H" firstAttribute="trailing" secondItem="3S9-XZ-vTm" secondAttribute="trailing" id="ZWk-Hn-Adw"/>
                                 <constraint firstItem="Djx-eG-OA3" firstAttribute="leading" secondItem="Fms-52-2fZ" secondAttribute="leading" constant="5" id="cQx-bH-vyQ"/>
                                 <constraint firstAttribute="bottom" secondItem="Djx-eG-OA3" secondAttribute="bottom" id="fGB-rE-mUP"/>
                                 <constraint firstItem="3S9-XZ-vTm" firstAttribute="top" secondItem="Fms-52-2fZ" secondAttribute="top" id="iAT-bL-QoI"/>
+                                <constraint firstItem="Fbp-m9-w0H" firstAttribute="top" secondItem="3S9-XZ-vTm" secondAttribute="top" id="sfv-Nf-DYW"/>
                                 <constraint firstItem="FBU-gT-uag" firstAttribute="trailing" secondItem="Q3o-7K-T92" secondAttribute="trailing" id="tql-bY-hnC"/>
                                 <constraint firstItem="Q3o-7K-T92" firstAttribute="centerX" secondItem="Djx-eG-OA3" secondAttribute="trailing" id="yZq-NJ-nz9"/>
                             </constraints>
