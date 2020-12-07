@@ -40,37 +40,38 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func panDirection(_ pan: UIPanGestureRecognizer) {
-        let locationPoint = pan.location(in: self.contentView)
-        let x = contentView.frame.origin.x
-        let width = contentView.frame.size.width
-        
-        switch pan.state {
-        case .began:
-            startX = locationPoint.x
-            
-        case .changed:
-            let xChanged = locationPoint.x - startX
-            var newX = x + xChanged
-            if newX > 0 { newX = 0 }
-            if newX < -width / 2 { newX = -width / 2 }
-            contentView.frame.origin.x = newX
-            
-        case .cancelled:
-            childHandler()
-            
-        case .failed:
-            childHandler()
-            
-        case .ended:
-            if (childShowing && x > -width / 2)
-                || (!childShowing && x < 0) {
-                childShowing = !childShowing
-                childHandler()
-            }
-            
-        default:
-            break
-        }
+//        (navigationController as? NavigationController)?.panDirection(pan)
+//        let locationPoint = pan.location(in: self.contentView)
+//        let x = contentView.frame.origin.x
+//        let width = contentView.frame.size.width
+//
+//        switch pan.state {
+//        case .began:
+//            startX = locationPoint.x
+//
+//        case .changed:
+//            let xChanged = locationPoint.x - startX
+//            var newX = x + xChanged
+//            if newX > 0 { newX = 0 }
+//            if newX < -width / 2 { newX = -width / 2 }
+//            contentView.frame.origin.x = newX
+//
+//        case .cancelled:
+//            childHandler()
+//
+//        case .failed:
+//            childHandler()
+//
+//        case .ended:
+//            if (childShowing && x > -width / 2)
+//                || (!childShowing && x < 0) {
+//                childShowing = !childShowing
+//                childHandler()
+//            }
+//
+//        default:
+//            break
+//        }
     }
     
     private func childHandler() {
@@ -88,8 +89,9 @@ class HomeViewController: BaseViewController {
     }
     
     func viewShop() {
-        childShowing = true
-        childHandler()
+//        childShowing = true
+//        childHandler()
+        navigationController?.pushViewController(ShopViewController(), animated: true)
     }
     
     var childShowing: Bool = false
@@ -101,7 +103,7 @@ class HomeViewController: BaseViewController {
         tabBarController?.tabBar.barTintColor = .black
         super.viewDidLoad()
         
-        addChild()
+//        addChild()
         DispatchQueue.main.async {
             self.playCurrentCell()
         }

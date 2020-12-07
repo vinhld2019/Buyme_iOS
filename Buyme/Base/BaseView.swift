@@ -29,6 +29,28 @@ class BaseView: UIView {
             self.initViews()
         }
     }
+    
+    func open(completion: ((Bool) -> Void)? = nil) {
+        Self.animate(withDuration: 0.3, animations: {
+            self.frame.origin.x = 0
+            self.frame.origin.y = 0
+        }, completion: { success in
+            self.frame.origin.x = 0
+            self.frame.origin.y = 0
+            completion?(success)
+        })
+    }
+    
+    func close(x: CGFloat = 0, y: CGFloat = 0, completion: ((Bool) -> Void)? = nil) {
+        Self.animate(withDuration: 0.3, animations: {
+            self.frame.origin.x = x
+            self.frame.origin.y = y
+        }, completion: { success in
+            self.frame.origin.x = x
+            self.frame.origin.y = y
+            completion?(success)
+        })
+    }
 }
 
 class FromNibBaseView: BaseView {

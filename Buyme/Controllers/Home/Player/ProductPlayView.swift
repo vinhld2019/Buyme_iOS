@@ -47,7 +47,8 @@ class ProductPlayView: FromNibBaseView {
             AppUtils.shared.present(vc, animated: true)
             
         case kCommentTag:
-            break
+            let vc = CommentViewController()
+            AppUtils.shared.navigationController?.present(vc, animated: true, completion: nil)
             
         case kHeartTag:
             break

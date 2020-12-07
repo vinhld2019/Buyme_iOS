@@ -110,6 +110,12 @@
 		159397BF257BAEE400EED956 /* ProductHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159397BE257BAEE400EED956 /* ProductHeaderView.xib */; };
 		159397C2257CB02C00EED956 /* RatingStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159397C1257CB02C00EED956 /* RatingStarView.swift */; };
 		159397C4257CB04400EED956 /* RatingStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159397C3257CB04400EED956 /* RatingStarView.xib */; };
+		159397CC257DDEA800EED956 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159397CA257DDEA800EED956 /* CommentViewController.swift */; };
+		159397CD257DDEA800EED956 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159397CB257DDEA800EED956 /* CommentViewController.xib */; };
+		159397D1257E15CE00EED956 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159397CF257E15CE00EED956 /* RatingViewController.swift */; };
+		159397D2257E15CE00EED956 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159397D0257E15CE00EED956 /* RatingViewController.xib */; };
+		159397DC257E38DF00EED956 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159397DA257E38DF00EED956 /* CommentTableViewCell.swift */; };
+		159397DD257E38DF00EED956 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159397DB257E38DF00EED956 /* CommentTableViewCell.xib */; };
 		15A41B902510D5BD00EC4945 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A41B8F2510D5BD00EC4945 /* AlertUtils.swift */; };
 		15A7A78B2570B8BB00288B7B /* TopSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7A7892570B8BB00288B7B /* TopSearchCollectionViewCell.swift */; };
 		15A7A78C2570B8BB00288B7B /* TopSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A7A78A2570B8BB00288B7B /* TopSearchCollectionViewCell.xib */; };
@@ -253,6 +259,12 @@
 		159397BE257BAEE400EED956 /* ProductHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductHeaderView.xib; sourceTree = "<group>"; };
 		159397C1257CB02C00EED956 /* RatingStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStarView.swift; sourceTree = "<group>"; };
 		159397C3257CB04400EED956 /* RatingStarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingStarView.xib; sourceTree = "<group>"; };
+		159397CA257DDEA800EED956 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		159397CB257DDEA800EED956 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		159397CF257E15CE00EED956 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		159397D0257E15CE00EED956 /* RatingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
+		159397DA257E38DF00EED956 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		159397DB257E38DF00EED956 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		15A41B8F2510D5BD00EC4945 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		15A7A7892570B8BB00288B7B /* TopSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A7A78A2570B8BB00288B7B /* TopSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSearchCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -411,14 +423,16 @@
 		009A2FEC2428C78D0012CF30 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1561E6D9257A9F9B002C25C5 /* Product */,
-				1561E6D4257A8DA4002C25C5 /* Shop */,
-				151B4E05256F5E0700FE5F4F /* User */,
-				1570C24125751089007685BA /* SearchWithCategoríe */,
+				159397CE257E15BE00EED956 /* Rating */,
+				159397C5257DCADB00EED956 /* Comment */,
 				151B4E00256F5D3D00FE5F4F /* CreateNew */,
-				151B4DFD256F5CCE00FE5F4F /* Search */,
 				15C13431256F5B8D00870142 /* Home */,
+				1561E6D9257A9F9B002C25C5 /* Product */,
+				151B4DFD256F5CCE00FE5F4F /* Search */,
+				1570C24125751089007685BA /* SearchWithCategoríe */,
+				1561E6D4257A8DA4002C25C5 /* Shop */,
 				15015466256F426100F360C6 /* TabBar */,
+				151B4E05256F5E0700FE5F4F /* User */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -610,6 +624,34 @@
 				159397C3257CB04400EED956 /* RatingStarView.xib */,
 			);
 			path = RatingStarView;
+			sourceTree = "<group>";
+		};
+		159397C5257DCADB00EED956 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				159397D5257E33AA00EED956 /* Cells */,
+				159397CA257DDEA800EED956 /* CommentViewController.swift */,
+				159397CB257DDEA800EED956 /* CommentViewController.xib */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		159397CE257E15BE00EED956 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				159397CF257E15CE00EED956 /* RatingViewController.swift */,
+				159397D0257E15CE00EED956 /* RatingViewController.xib */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		159397D5257E33AA00EED956 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				159397DA257E38DF00EED956 /* CommentTableViewCell.swift */,
+				159397DB257E38DF00EED956 /* CommentTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		15A7A7882570B8A800288B7B /* TopSearchCollectionViewCell */ = {
@@ -892,6 +934,7 @@
 				1521337025765FB0005F98A6 /* 863994649416865203210.mp4 in Resources */,
 				1521337125765FB0005F98A6 /* 91499447547729099884.mp4 in Resources */,
 				1521337225765FB0005F98A6 /* 91555661403983710301.mp4 in Resources */,
+				159397D2257E15CE00EED956 /* RatingViewController.xib in Resources */,
 				1521335C25765ED2005F98A6 /* 18065816251741380939.mp4 in Resources */,
 				1561E6D8257A8DB2002C25C5 /* ShopViewController.xib in Resources */,
 				151B4E34256F9E9E00FE5F4F /* Roboto-ThinItalic.ttf in Resources */,
@@ -907,6 +950,7 @@
 				159397C4257CB04400EED956 /* RatingStarView.xib in Resources */,
 				1521335A2576536D005F98A6 /* CartSizeCollectionViewCell.xib in Resources */,
 				A967DB9825724F0D00EAC002 /* fa-solid-900.ttf in Resources */,
+				159397DD257E38DF00EED956 /* CommentTableViewCell.xib in Resources */,
 				151B4E37256F9E9E00FE5F4F /* Roboto-Italic.ttf in Resources */,
 				151B4E38256F9E9E00FE5F4F /* LICENSE.txt in Resources */,
 				15A7A78C2570B8BB00288B7B /* TopSearchCollectionViewCell.xib in Resources */,
@@ -928,6 +972,7 @@
 				151B4E3A256F9E9E00FE5F4F /* Roboto-Bold.ttf in Resources */,
 				1561E6D3257A7100002C25C5 /* ProductPlayView.xib in Resources */,
 				5DD98849218FDCAE006342F0 /* Assets.xcassets in Resources */,
+				159397CD257DDEA800EED956 /* CommentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,6 +1058,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				009A31902428C78E0012CF30 /* DeviceUtils.swift in Sources */,
+				159397D1257E15CE00EED956 /* RatingViewController.swift in Sources */,
 				009A31952428C78E0012CF30 /* UserDefaultsUtils.swift in Sources */,
 				15015468256F42FD00F360C6 /* TabBarViewController.swift in Sources */,
 				151B4E44256FB52F00FE5F4F /* ProductsForYouCollectionViewCell.swift in Sources */,
@@ -1052,6 +1098,7 @@
 				15AA0267250512D5000CD265 /* HomeViewController.swift in Sources */,
 				1570C24B25751089007685BA /* SearchWithCategoriesViewController.swift in Sources */,
 				009A31892428C78E0012CF30 /* DeviceOwnerAuthentication.swift in Sources */,
+				159397CC257DDEA800EED956 /* CommentViewController.swift in Sources */,
 				009A313C2428C78E0012CF30 /* BasePresenter.swift in Sources */,
 				009A31862428C78E0012CF30 /* StringUtils.swift in Sources */,
 				00DE02AF24C92E6300888041 /* Config.swift in Sources */,
@@ -1062,6 +1109,7 @@
 				009A31832428C78E0012CF30 /* TokenUtils.swift in Sources */,
 				1501546A256F450300F360C6 /* CartView.swift in Sources */,
 				15D6B20F2505DB88006D3F24 /* SecurityUtils.swift in Sources */,
+				159397DC257E38DF00EED956 /* CommentTableViewCell.swift in Sources */,
 				009A31932428C78E0012CF30 /* ApiUtils.swift in Sources */,
 				009A2A6A2428B06F0012CF30 /* SceneDelegate.swift in Sources */,
 				009A31B42428C78F0012CF30 /* AvatarView.swift in Sources */,
