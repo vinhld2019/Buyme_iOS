@@ -1,0 +1,541 @@
+{
+  "count": 134,
+  "symbols": [
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BasePresenter.swift:11:10",
+      "symbol": "BaseDelegate"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BasePresenter.swift:17:7",
+      "symbol": "BasePresenter"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BasePresenter.swift:24:10",
+      "symbol": "attachDelegate(delegate:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BasePresenter.swift:28:10",
+      "symbol": "attachDelegateIfNeed(delegate:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BasePresenter.swift:34:10",
+      "symbol": "detachDelegate()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BaseView.swift:33:10",
+      "symbol": "open(completion:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BaseView.swift:44:10",
+      "symbol": "close(x:y:completion:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BaseViewController.swift:33:10",
+      "symbol": "showLoading(tag:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BaseViewController.swift:37:10",
+      "symbol": "hideLoading(tag:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BaseViewController.swift:41:10",
+      "symbol": "toast(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/BaseViewController.swift:46:10",
+      "symbol": "alert(message:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/NavigationController.swift:113:10",
+      "symbol": "popLast(popCount:push:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/NavigationController.swift:86:10",
+      "symbol": "viewShop()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Base/NavigationController.swift:96:18",
+      "symbol": "addChild()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Controllers/Home/HomeViewController.swift:112:18",
+      "symbol": "addChild()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Controllers/Home/HomeViewController.swift:122:18",
+      "symbol": "addTabsView()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Controllers/Home/HomeViewController.swift:153:16",
+      "symbol": "touchUpInSide(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Controllers/Home/HomeViewController.swift:77:18",
+      "symbol": "childHandler()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/CustomViews/CartView.swift:17:10",
+      "symbol": "setup()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/CustomViews/CartView.swift:40:10",
+      "symbol": "dismiss(animated:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/CustomViews/CollectionView.swift:20:10",
+      "symbol": "with(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/CustomViews/CollectionView.swift:25:10",
+      "symbol": "with(key:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/CustomViews/CommentView/CommentView.swift:36:10",
+      "symbol": "startComment()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/CustomViews/ProgressView.swift:11:7",
+      "symbol": "ProgressView"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Entities/ArrayResponse.swift:12:7",
+      "symbol": "ArrayResponse"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Entities/SingleResponse.swift:12:7",
+      "symbol": "SingleResponse"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/AlertUtils.swift:11:7",
+      "symbol": "VinhLDTest"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/AlertUtils.swift:13:10",
+      "symbol": "test1()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/AlertUtils.swift:17:10",
+      "symbol": "test2()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/ApiUtils.swift:120:10",
+      "symbol": "call(_:body:parameter:httpMethod:header:loading:checkStatus:completionHandler:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/AppUtils.swift:10:10",
+      "symbol": "Copyable"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/DatePickerDialog.swift:15:10",
+      "symbol": "showExt(_:doneButtonTitle:cancelButtonTitle:defaultDate:minimumDate:maximumDate:datePickerMode:callback:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/DateUtils.swift:88:10",
+      "symbol": "string(with:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/DeviceOwnerAuthentication.swift:69:10",
+      "symbol": "showDeviceOwnerAuthentication(completionHandler:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/ImagePickerUtils.swift:45:10",
+      "symbol": "show(delegate:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/MoneyUtils.swift:24:17",
+      "symbol": "fromDouble(money:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/MoneyUtils.swift:43:17",
+      "symbol": "amountToWord(amount:currency:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/MoneyUtils.swift:85:17",
+      "symbol": "formatCurrency(money:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/MoneyUtils.swift:99:17",
+      "symbol": "validInput(_:replacementString:range:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/StringUtils.swift:30:10",
+      "symbol": "matchesRegex(for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/StringUtils.swift:50:10",
+      "symbol": "substring(fromIndex:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/StringUtils.swift:54:10",
+      "symbol": "substring(toIndex:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/UserDefaultsUtils.swift:15:10",
+      "symbol": "remove(key:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/UserDefaultsUtils.swift:35:10",
+      "symbol": "getCGFloat(key:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/UserDefaultsUtils.swift:39:10",
+      "symbol": "getArray(key:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/UserDefaultsUtils.swift:43:10",
+      "symbol": "get(key:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/UserUtils.swift:32:10",
+      "symbol": "invalidate()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/ViewUtils.swift:167:10",
+      "symbol": "selectCheckBox(checked:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Buyme/Utils/ViewUtils.swift:16:10",
+      "symbol": "shareScreenShot(_:baseVC:height:completionHandler:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/NetworkReachabilityManager.swift:146:15",
+      "symbol": "startListening()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:160:15",
+      "symbol": "authenticate(user:password:persistence:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:187:21",
+      "symbol": "authorizationHeader(user:password:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:213:15",
+      "symbol": "suspend()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:395:15",
+      "symbol": "stream(closure:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:409:15",
+      "symbol": "downloadProgress(queue:closure:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:530:15",
+      "symbol": "downloadProgress(queue:closure:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:544:21",
+      "symbol": "suggestedDownloadDestination(for:in:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Alamofire/Source/Request.swift:628:15",
+      "symbol": "uploadProgress(queue:closure:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayer.swift:193:15",
+      "symbol": "addVolume(step:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayer.swift:202:15",
+      "symbol": "reduceVolume(step:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayer.swift:209:15",
+      "symbol": "prepareToDealloc()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayer.swift:568:15",
+      "symbol": "controlView(controlView:didChangeVideoAspectRatio:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayerControlView.swift:311:15",
+      "symbol": "showCoverWithLink(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayerControlView.swift:466:28",
+      "symbol": "onReplyButtonPressed()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/BMPlayer/Source/BMPlayerLayerView.swift:135:15",
+      "symbol": "playURL(url:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/DropDown/DropDown/helpers/DPDConstants.swift:13:18",
+      "symbol": "KeyPath"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPageControl.swift:12:12",
+      "symbol": "FSPageControl"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPageControl.swift:141:15",
+      "symbol": "setStrokeColor(_:for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPageControl.swift:155:15",
+      "symbol": "setFillColor(_:for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPageControl.swift:169:15",
+      "symbol": "setImage(_:for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPageControl.swift:184:15",
+      "symbol": "setAlpha(_:for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPageControl.swift:198:15",
+      "symbol": "setPath(_:for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:447:15",
+      "symbol": "register(_:forCellWithReuseIdentifier:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:457:15",
+      "symbol": "register(_:forCellWithReuseIdentifier:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:468:15",
+      "symbol": "dequeueReusableCell(withReuseIdentifier:at:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:490:15",
+      "symbol": "selectItem(at:animated:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:502:15",
+      "symbol": "deselectItem(at:animated:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:513:15",
+      "symbol": "scrollToItem(at:animated:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:535:15",
+      "symbol": "index(for:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/FSPagerView/Sources/FSPagerView.swift:547:15",
+      "symbol": "cellForItem(at:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageCache.swift:250:15",
+      "symbol": "removeImage(forKey:processorIdentifier:fromMemory:fromDisk:completionHandler:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageCache.swift:414:15",
+      "symbol": "clearDiskCache(completion:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageCache.swift:610:15",
+      "symbol": "hash(forKey:processorIdentifier:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageCache.swift:621:15",
+      "symbol": "calculateDiskCacheSize(completion:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageCache.swift:640:15",
+      "symbol": "cachePath(forKey:processorIdentifier:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageCache.swift:697:15",
+      "symbol": "isImageCached(forKey:processorIdentifier:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageModifier.swift:45:10",
+      "symbol": "modify(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/ImageModifier.swift:55:20",
+      "symbol": "GeneralModifier"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/Kingfisher/Sources/String+MD5.swift:87:10",
+      "symbol": "appendBytes(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/CodableTransform.swift:32:12",
+      "symbol": "CodableTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/CustomDateFormatTransform.swift:31:12",
+      "symbol": "CustomDateFormatTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/DataTransform.swift:31:12",
+      "symbol": "DataTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/DateTransform.swift:31:12",
+      "symbol": "DateTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/HexColorTransform.swift:34:12",
+      "symbol": "HexColorTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:105:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:114:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:125:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:137:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:166:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:178:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:192:7",
+      "symbol": "value(_:nested:delimiter:using:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:207:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:222:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:236:7",
+      "symbol": "value(_:nested:delimiter:using:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:279:7",
+      "symbol": "mapArray(JSONString:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:297:7",
+      "symbol": "mapDictionary(JSONString:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:319:7",
+      "symbol": "mapDictionaryOfArrays(JSONObject:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:334:7",
+      "symbol": "mapArrayOfArrays(JSONObject:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:65:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:83:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:88:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:93:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/ImmutableMappable.swift:98:7",
+      "symbol": "value(_:nested:delimiter:file:function:line:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/Mappable.swift:103:7",
+      "symbol": "toJSONString(prettyPrint:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/Mappable.swift:128:7",
+      "symbol": "toJSON()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/Mappable.swift:133:7",
+      "symbol": "toJSONString(prettyPrint:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/Mappable.swift:75:7",
+      "symbol": "toJSONString(prettyPrint:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/Mappable.swift:98:7",
+      "symbol": "toJSON()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/NSDecimalNumberTransform.swift:31:12",
+      "symbol": "NSDecimalNumberTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/TransformOf.swift:29:12",
+      "symbol": "TransformOf"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/ObjectMapper/Sources/URLTransform.swift:31:12",
+      "symbol": "URLTransform"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintAttributes.swift:181:15",
+      "symbol": "+(_:_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintAttributes.swift:189:15",
+      "symbol": "-=(_:_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintAttributes.swift:50:26",
+      "symbol": "convertFromNilLiteral()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintAttributes.swift:53:19",
+      "symbol": "toRaw()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintAttributes.swift:54:26",
+      "symbol": "fromRaw(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintAttributes.swift:55:26",
+      "symbol": "fromMask(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintView+Extensions.swift:124:10",
+      "symbol": "snp_prepareConstraints(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintView+Extensions.swift:129:10",
+      "symbol": "snp_makeConstraints(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintView+Extensions.swift:134:10",
+      "symbol": "snp_remakeConstraints(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintView+Extensions.swift:139:10",
+      "symbol": "snp_updateConstraints(_:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/ConstraintView+Extensions.swift:144:10",
+      "symbol": "snp_removeConstraints()"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SnapKit/Source/Debugging.swift:136:14",
+      "symbol": "conditionalOptional(from:)"
+    },
+    {
+      "location": "/Volumes/Datas/VinhLD/Buyme/BuyMeiOS/Pods/SwipeMenuViewController/Sources/Classes/SwipeMenuViewController.swift:3:12",
+      "symbol": "SwipeMenuViewController"
+    }
+  ]
+}

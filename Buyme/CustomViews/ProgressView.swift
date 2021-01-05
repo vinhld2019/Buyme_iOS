@@ -27,7 +27,7 @@ class ProgressView: BaseView {
         }
     }
 
-    override func initViews() {
+    override func initialization() {
         addSubview(contentView)
         contentView.snp.makeConstraints { (make) in
             make.top.right.bottom.left.equalToSuperview()

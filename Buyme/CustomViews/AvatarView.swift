@@ -70,7 +70,7 @@ class AvatarView: BaseView {
     private var label: UILabel!
     private var imageView: UIImageView!
 
-    override func initViews() {
+    override func initialization() {
         self.layer.cornerRadius = radius
         self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOpacity = 1

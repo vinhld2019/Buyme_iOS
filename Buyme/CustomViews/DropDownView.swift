@@ -51,7 +51,7 @@ class DropDownView: BaseView {
     var label: Label!
     var imageView: UIImageView!
 
-    override func initViews() {
+    override func initialization() {
         self.layer.cornerRadius = kAppRadius
         self.layer.borderColor = UIColor(rgb: 0xBDBDBD).cgColor
         self.layer.borderWidth = 1

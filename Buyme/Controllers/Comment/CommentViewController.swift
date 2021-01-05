@@ -2,55 +2,69 @@
 //  CommentViewController.swift
 //  Buyme
 //
-//  Created by Vinh LD on 12/7/20.
+//  Created by Vinh LD on 12/21/20.
 //  Copyright © 2020 Vinh LD. All rights reserved.
 //
 
 import UIKit
 
-class CommentViewController: BaseViewController {
+class CommentViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
-    override func back(_ sender: UIButton) {
-        self.dismiss(animated: true)
-    }
     
-    @IBAction func viewRating(_ sender: UIButton) {
-        let vc = RatingViewController()
-        present(vc, animated: true)
+    @IBAction func close(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
         CommentTableViewCell.register(tableView)
     }
-    
-    override func initViews() {
-        
-    }
 
+    var comments: [Comment] = [.init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init(), .init()]
 }
 
 extension CommentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+        if let height = comments[indexPath.row].repliesHeight {
+            return height
+        }
+        return UITableView.automaticDimension
     }
 }
 
 extension CommentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        comments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = CommentTableViewCell.cell(for: tableView, at: indexPath) {
+            cell.setup(comment: comments[indexPath.row])
+            cell.delegate = self
             return cell
         }
         
         return .init()
+    }
+}
+
+extension CommentViewController: CommentTableViewCellDelegate {
+    func commentTableViewCell(_ cell: CommentTableViewCell, like comment: Comment) {
+        if let index = tableView.indexPath(for: cell) {
+            comments[index.row].isLiked = !comments[index.row].isLiked
+            tableView.reloadRows(at: [index], with: .automatic)
+        }
+    }
+    
+    func commentTableViewCell(_ cell: CommentTableViewCell, expand height: CGFloat?) {
+        if let index = tableView.indexPath(for: cell) {
+            let comment = comments[index.row]
+            let isExpand = comment.isExpand
+            comments[index.row].isExpand = !isExpand
+            comments[index.row].repliesHeight = height
+            tableView.reloadRows(at: [index], with: .automatic)
+        }
     }
 }

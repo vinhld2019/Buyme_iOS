@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBarViewController" customModule="ibuy_ubuy" customModuleProvider="target">
+            <connections>
+                <outlet property="tabBarView" destination="4vP-M6-6uz" id="nPu-IK-7Hs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vP-M6-6uz">
+                    <rect key="frame" x="0.0" y="802" width="414" height="94"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghd-Rk-bJ0">
+                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="94"/>
+                            <connections>
+                                <action selector="tabBarItemSelected:" destination="-1" eventType="touchUpInside" id="tni-z2-Qcl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSR-1l-F1q">
+                            <rect key="frame" x="103.5" y="0.0" width="103.5" height="94"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <connections>
+                                <action selector="tabBarItemSelected:" destination="-1" eventType="touchUpInside" id="z5z-oE-GE9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lm-Xn-cQ6">
+                            <rect key="frame" x="207" y="0.0" width="103.5" height="94"/>
+                            <connections>
+                                <action selector="tabBarItemSelected:" destination="-1" eventType="touchUpInside" id="OEn-95-j4V"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfZ-Tx-WcU">
+                            <rect key="frame" x="310.5" y="0.0" width="103.5" height="94"/>
+                            <connections>
+                                <action selector="tabBarItemSelected:" destination="-1" eventType="touchUpInside" id="L0U-9U-hSb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GfZ-Tx-WcU" firstAttribute="leading" secondItem="4Lm-Xn-cQ6" secondAttribute="trailing" id="3rb-cK-CWL"/>
+                        <constraint firstAttribute="trailing" secondItem="GfZ-Tx-WcU" secondAttribute="trailing" id="68p-cy-jEy"/>
+                        <constraint firstItem="WSR-1l-F1q" firstAttribute="top" secondItem="4vP-M6-6uz" secondAttribute="top" id="8Bv-4l-NGv"/>
+                        <constraint firstAttribute="bottom" secondItem="4Lm-Xn-cQ6" secondAttribute="bottom" id="8GF-xv-mGX"/>
+                        <constraint firstItem="WSR-1l-F1q" firstAttribute="leading" secondItem="ghd-Rk-bJ0" secondAttribute="trailing" id="9EW-2g-3OY"/>
+                        <constraint firstItem="GfZ-Tx-WcU" firstAttribute="width" secondItem="4Lm-Xn-cQ6" secondAttribute="width" id="DdI-Xm-Qvt"/>
+                        <constraint firstAttribute="bottom" secondItem="WSR-1l-F1q" secondAttribute="bottom" id="GbX-RW-DKS"/>
+                        <constraint firstItem="ghd-Rk-bJ0" firstAttribute="top" secondItem="4vP-M6-6uz" secondAttribute="top" id="HM9-nk-1Lh"/>
+                        <constraint firstItem="GfZ-Tx-WcU" firstAttribute="width" secondItem="WSR-1l-F1q" secondAttribute="width" id="IB2-DM-6hW"/>
+                        <constraint firstItem="ghd-Rk-bJ0" firstAttribute="leading" secondItem="4vP-M6-6uz" secondAttribute="leading" id="JwU-SA-nyD"/>
+                        <constraint firstAttribute="bottom" secondItem="GfZ-Tx-WcU" secondAttribute="bottom" id="Mmh-E1-dJd"/>
+                        <constraint firstItem="GfZ-Tx-WcU" firstAttribute="width" secondItem="ghd-Rk-bJ0" secondAttribute="width" id="Xdn-V6-w9Q"/>
+                        <constraint firstItem="4Lm-Xn-cQ6" firstAttribute="leading" secondItem="WSR-1l-F1q" secondAttribute="trailing" id="cVI-Jc-rwg"/>
+                        <constraint firstItem="4Lm-Xn-cQ6" firstAttribute="top" secondItem="4vP-M6-6uz" secondAttribute="top" id="f7J-Ei-zfa"/>
+                        <constraint firstAttribute="bottom" secondItem="ghd-Rk-bJ0" secondAttribute="bottom" id="h6l-Z7-cPM"/>
+                        <constraint firstItem="GfZ-Tx-WcU" firstAttribute="top" secondItem="4vP-M6-6uz" secondAttribute="top" id="vo2-yR-EAZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4vP-M6-6uz" secondAttribute="bottom" id="BuM-Kn-E4P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4vP-M6-6uz" secondAttribute="trailing" id="IKp-Sq-sDc"/>
+                <constraint firstItem="4vP-M6-6uz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SdD-n7-9QV"/>
+                <constraint firstItem="4vP-M6-6uz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-60" id="hUy-2G-xxx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="103" y="130"/>
+        </view>
+    </objects>
+</document>

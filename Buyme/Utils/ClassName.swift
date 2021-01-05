@@ -36,6 +36,10 @@ extension ClassNameable {
     static func cell(for view: UITableView, at indexPath: IndexPath) -> Self? {
         view.dequeueReusableCell(withIdentifier: className, for: indexPath) as? Self
     }
+    
+    var navigation: NavigationController? {
+        AppUtils.shared.navigationController
+    }
 }
 
 extension NSObject: ClassNameable {}

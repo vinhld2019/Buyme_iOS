@@ -12,22 +12,20 @@ class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.initialization()
+        DispatchQueue.main.async {
+            self.initialization()
+        }
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.initialization()
-    }
-    
-    func initViews() {
-        nothingHandle()
+        DispatchQueue.main.async {
+            self.initialization()
+        }
     }
     
     func initialization() {
-        DispatchQueue.main.async {
-            self.initViews()
-        }
+        backgroundColor = .clear
     }
     
     func open(completion: ((Bool) -> Void)? = nil) {
@@ -57,7 +55,7 @@ class FromNibBaseView: BaseView {
     
     @IBOutlet weak var view: UIView!
     
-    override func initViews() {
+    override func initialization() {
         Bundle.main.loadNibNamed(Self.className, owner: self, options: nil)
         addSubview(view)
         clipsToBounds = true

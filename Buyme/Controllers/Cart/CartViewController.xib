@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="ibuy_ubuy" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" tag="2" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGm-NK-wbH">
+                    <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9d-rS-hza" customClass="TabBarView" customModule="ibuy_ubuy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="sgr-X9-KgN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="D9d-rS-hza" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7um-SP-TzJ"/>
+                <constraint firstItem="D9d-rS-hza" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BEq-qn-W2a"/>
+                <constraint firstItem="IGm-NK-wbH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="F3W-6F-UVL"/>
+                <constraint firstItem="IGm-NK-wbH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Obm-hA-D9G"/>
+                <constraint firstItem="D9d-rS-hza" firstAttribute="top" secondItem="IGm-NK-wbH" secondAttribute="bottom" id="dMG-T5-m9t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IGm-NK-wbH" secondAttribute="trailing" id="dq3-1p-68i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="D9d-rS-hza" secondAttribute="bottom" id="pfh-nJ-qYT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="38" y="130"/>
+        </view>
+    </objects>
+</document>

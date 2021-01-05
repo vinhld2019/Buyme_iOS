@@ -15,7 +15,6 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
         self.initialization()
         DispatchQueue.main.async {
-//            self.addChild()
             let frame = self.view.safeAreaLayoutGuide.layoutFrame
             AppUtils.shared.topAnchorHeight = frame.origin.y
         }
@@ -33,79 +32,6 @@ class NavigationController: UINavigationController {
 
     func initialization() {
         setViewControllers([TabBarViewController()], animated: false)
-    }
-    
-    @objc func panDirection(_ pan: UIPanGestureRecognizer) {
-        let locationPoint = pan.location(in: self.view)
-        let x = shopViewController.view.frame.origin.x
-        let width = shopViewController.view.frame.size.width
-        
-        switch pan.state {
-        case .began:
-            startX = locationPoint.x
-            
-        case .changed:
-            let xChanged = locationPoint.x - startX
-            var newX = x + xChanged
-            if newX < 0 { newX = 0 }
-            if newX > width { newX = width }
-            shopViewController.view.frame.origin.x = newX
-            
-        case .cancelled:
-            childHandler()
-            
-        case .failed:
-            childHandler()
-            
-        case .ended:
-            if (childShowing && x > -width / 2)
-                || (!childShowing && x < 0) {
-                childShowing = !childShowing
-                childHandler()
-            }
-            
-        default:
-            break
-        }
-    }
-    
-    private func childHandler() {
-        if childShowing {
-//            currentCell?.pause()
-        } else {
-//            playCurrentCell()
-        }
-        let x = childShowing ? 0 : -self.shopViewController.view.frame.size.width
-        UIView.animate(withDuration: 0.3, animations: {
-            self.shopViewController.view.frame.origin.x = x
-        }, completion: { _ in
-            self.shopViewController.view.frame.origin.x = x
-        })
-    }
-    
-    func viewShop() {
-        childShowing = true
-        childHandler()
-    }
-    
-    var childShowing: Bool = false
-    var startX: CGFloat = 0
-    var panDirection: Int = 0
-    var shopViewController: ShopViewController = .init()
-    
-    private func addChild() {
-        let size = view.bounds.size
-        let width = size.width
-        let height = size.height
-        
-        addChild(shopViewController)
-        shopViewController.didMove(toParent: self)
-        view.addSubview(shopViewController.view)
-        shopViewController.view.frame = CGRect(x: width, y: 0, width: width, height: height)
-        
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(panDirection(_:)))
-        shopViewController.view.addGestureRecognizer(pan)
-        shopViewController.view.isUserInteractionEnabled = true
     }
 }
 

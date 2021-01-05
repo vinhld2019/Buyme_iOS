@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import BMPlayer
 
 class ViewUtils: NSObject {
     
@@ -176,6 +177,25 @@ extension UILabel {
     }
 }
 
+extension UIImageView {
+    
+    var base64: String? {
+        if let image = self.image {
+            let jpgData = image.jpegData(compressionQuality: 0.5)
+            if let coding = jpgData?.base64EncodedString() {
+                return "data:image/jpg;base64,\(coding)"
+            }
+        }
+        return nil
+    }
+    
+    func setImage(link: String) {
+        if let url = URL(string: link) {
+            self.kf.setImage(with: url)
+        }
+    }
+}
+
 class Label: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -200,21 +220,10 @@ class TextField: UITextField {
     }
 }
 
-extension UIImageView {
+class HomeTabButton: UIButton {
     
-    var base64: String? {
-        if let image = self.image {
-            let jpgData = image.jpegData(compressionQuality: 0.5)
-            if let coding = jpgData?.base64EncodedString() {
-                return "data:image/jpg;base64,\(coding)"
-            }
-        }
-        return nil
-    }
+}
+
+class Player: BMPlayer {
     
-    func setImage(link: String) {
-        if let url = URL(string: link) {
-            self.kf.setImage(with: url)
-        }
-    }
 }

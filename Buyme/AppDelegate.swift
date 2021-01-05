@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        // 7: 375.0 667.0
+        // 11pm: 414.0 896.0
+        print(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
         WindowUtils.shared.makeKeyAndVisible()
         
         ApiUtils.shared.initialization()

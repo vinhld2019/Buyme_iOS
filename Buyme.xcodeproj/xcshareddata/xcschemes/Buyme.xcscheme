@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5DD9883D218FDCAB006342F0"
-               BuildableName = "BUY ME.app"
+               BuildableName = "ibuy ubuy.app"
                BlueprintName = "Buyme"
                ReferencedContainer = "container:Buyme.xcodeproj">
             </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DD9883D218FDCAB006342F0"
-            BuildableName = "BUY ME.app"
+            BuildableName = "ibuy ubuy.app"
             BlueprintName = "Buyme"
             ReferencedContainer = "container:Buyme.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DD9883D218FDCAB006342F0"
-            BuildableName = "BUY ME.app"
+            BuildableName = "ibuy ubuy.app"
             BlueprintName = "Buyme"
             ReferencedContainer = "container:Buyme.xcodeproj">
          </BuildableReference>

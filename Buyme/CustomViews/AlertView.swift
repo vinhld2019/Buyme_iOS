@@ -39,7 +39,7 @@ class AlertView: BaseView {
     
     weak var delegate: AlertViewDelegate?
     
-    override func initViews() {
+    override func initialization() {
         self.backgroundColor = .clear
         let closeButton = UIButton()
         self.addSubview(closeButton)

@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Buyme
 //
-//  Created by Vinh LD on 9/6/20.
+//  Created by Vinh LD on 12/20/20.
 //  Copyright © 2020 Vinh LD. All rights reserved.
 //
 
@@ -11,74 +11,81 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     @IBOutlet weak var contentView: UIView!
-    var tabsView: UIView = .init()
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var followingButton: UIButton!
+    @IBOutlet weak var tabBarView: TabBarView!
+    
     @IBOutlet weak var suggestingButton: UIButton!
+    @IBOutlet weak var followingButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
-    
-    private var tabs: [UIButton] { [followingButton, suggestingButton, trendingButton] }
-    var products: [Product] = [
-    .init(name: "18065816251741380939", video: "37322918484537068605", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "545063269024623444111", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "840845422251037567612", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "11872577020384669352", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "67482683536103484808", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "50896561048017056526", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "14733308977796058393", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "88933196843442697297", description: "18065816251741380939", cost: 1),
-    .init(name: "18065816251741380939", video: "863994649416865203210", description: "18065816251741380939", cost: 1),
-    .init(name: "91499447547729099884", video: "91499447547729099884", description: "91499447547729099884", cost: 1),
-    .init(name: "91555661403983710301", video: "91555661403983710301", description: "91555661403983710301", cost: 1),
-    .init(name: "18065816251741380939", video: "18065816251741380939", description: "18065816251741380939", cost: 1)
-    ]
-    
-    @IBAction func changeTab(_ sender: UIButton) {
-        for button in tabs {
-            button.setTitleColor(.init(rgb: 0xFFFFFF, alpha: button.tag == sender.tag ? 1 : 0.8), for: .normal)
+    @IBOutlet weak var suggestingCollectionView: UICollectionView!
+    @IBOutlet weak var followingCollectionView: UICollectionView!
+    @IBOutlet weak var trendingCollectionView: UICollectionView!
+
+    @IBAction func changeContent(_ sender: UIButton) {
+        let buttons: [UIButton] = [suggestingButton, followingButton, trendingButton]
+        let collectionViews: [UICollectionView] = [suggestingCollectionView, followingCollectionView, trendingCollectionView]
+        let tag = sender.tag
+        currentCell?.pause()
+        for index in 0...buttons.count-1 {
+            let button = buttons[index]
+            let collectionView = collectionViews[index]
+            let isSelected = tag == button.tag
+            button.isSelected = isSelected
+            collectionView.isHidden = !isSelected
+            if isSelected {
+                self.collectionView = collectionView
+                playCurrentCell()
+            }
         }
     }
     
     @IBAction func panDirection(_ pan: UIPanGestureRecognizer) {
-//        (navigationController as? NavigationController)?.panDirection(pan)
-//        let locationPoint = pan.location(in: self.contentView)
-//        let x = contentView.frame.origin.x
-//        let width = contentView.frame.size.width
-//
-//        switch pan.state {
-//        case .began:
-//            startX = locationPoint.x
-//
-//        case .changed:
-//            let xChanged = locationPoint.x - startX
-//            var newX = x + xChanged
-//            if newX > 0 { newX = 0 }
-//            if newX < -width / 2 { newX = -width / 2 }
-//            contentView.frame.origin.x = newX
-//
-//        case .cancelled:
-//            childHandler()
-//
-//        case .failed:
-//            childHandler()
-//
-//        case .ended:
-//            if (childShowing && x > -width / 2)
-//                || (!childShowing && x < 0) {
-//                childShowing = !childShowing
-//                childHandler()
-//            }
-//
-//        default:
-//            break
-//        }
+        let locationPoint = pan.location(in: self.contentView)
+        let x = contentView.frame.origin.x
+        let width = contentView.frame.size.width
+
+        switch pan.state {
+        case .began:
+            startX = locationPoint.x
+
+        case .changed:
+            let xChanged = locationPoint.x - startX
+            var newX = x + xChanged
+            if newX > 0 { newX = 0 }
+            if newX < -width / 2 { newX = -width / 2 }
+            contentView.frame.origin.x = newX
+
+        case .cancelled:
+            childHandler()
+
+        case .failed:
+            childHandler()
+
+        case .ended:
+            if (childShowing && x > -width / 2)
+                || (!childShowing && x < 0) {
+                childShowing = !childShowing
+                childHandler()
+            }
+
+        default:
+            break
+        }
     }
     
     private func childHandler() {
         if childShowing {
             currentCell?.pause()
+            if let vc = parent as? TabBarViewController {
+                vc.isTabBarEnable = false
+            }
+//            productViewController.play()
         } else {
             playCurrentCell()
+            if let vc = parent as? TabBarViewController {
+                vc.isTabBarEnable = true
+            }
+            tabBarView.isHidden = false
+//            productViewController.pause()
         }
         let x = childShowing ? -self.contentView.frame.size.width / 2 : 0
         UIView.animate(withDuration: 0.3, animations: {
@@ -88,75 +95,63 @@ class HomeViewController: BaseViewController {
         })
     }
     
-    func viewShop() {
-//        childShowing = true
-//        childHandler()
-        navigationController?.pushViewController(ShopViewController(), animated: true)
-    }
-    
     var childShowing: Bool = false
     var startX: CGFloat = 0
     var panDirection: Int = 0
-    var shopViewController: ShopViewController = .init()
-
-    override func viewDidLoad() {
-        tabBarController?.tabBar.barTintColor = .black
-        super.viewDidLoad()
-        
-//        addChild()
-        DispatchQueue.main.async {
-            self.playCurrentCell()
+    var productViewController: SellerViewController!
+    
+    private func addProduct() {
+        productViewController = .init()
+        productViewController.backAction = {
+            self.childShowing = !self.childShowing
+            self.childHandler()
         }
+        addChild(productViewController)
+        productViewController.didMove(toParent: self)
+        contentView.addSubview(productViewController.view)
+        let size = contentView.bounds.size
+        let width = size.width / 2
+        productViewController.view.frame = CGRect(x: width, y: 0, width: width, height: size.height)
     }
-    
-    private func addChild() {
-        addChild(shopViewController)
-        shopViewController.didMove(toParent: self)
-        self.contentView.addSubview(shopViewController.view)
-        var frame = contentView.bounds
-        frame.size.width /= 2
-        frame.origin.x = frame.size.width
-        shopViewController.view.frame = frame
-    }
-    
-    private func addTabsView() {
-
-    }
-    
-    override func initViews() {
-        super.initViews()
-        view.backgroundColor = .black
         
-        PlayerCollectionViewCell.register(collectionView)
-        collectionView.delegate = self
-        collectionView.dataSource = self
+    func viewProduct() {
+        childShowing = true
+        childHandler()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.addProduct()
+        }
+
+        HomeCollectionViewCell.register(suggestingCollectionView)
+        HomeCollectionViewCell.register(followingCollectionView)
+        HomeCollectionViewCell.register(trendingCollectionView)
+        
+        collectionView = suggestingCollectionView
+        
+        DispatchQueue.main.async {
+            print(self.view.frame.size.width)
+            print(self.contentView.frame.size.width)
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        tabBarController?.tabBar.barTintColor = .white
         currentCell?.pause()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tabBarController?.tabBar.barTintColor = .black
-        
-        playCurrentCell()
+        if !view.isHidden {
+            playCurrentCell()
+        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.barTintColor = .black
-    }
-    
-    @objc func touchUpInSide(_ sender: UIButton) {
-        Mics.shared.log("Touch")
-        sender.setTitle(DeviceUtils.shared.wifiIPAddress, for: .normal)
-    }
-    
-    var currentCell: PlayerCollectionViewCell? {
-        collectionView.visibleCells.first as? PlayerCollectionViewCell
+    var collectionView: UICollectionView?
+    var currentCell: HomeCollectionViewCell? {
+        collectionView?.visibleCells.first as? HomeCollectionViewCell
     }
     
     func playCurrentCell() {
@@ -179,7 +174,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let cell = cell as? PlayerCollectionViewCell {
+        if let cell = cell as? HomeCollectionViewCell {
             cell.pause()
         }
         playCurrentCell()
@@ -188,15 +183,26 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        products.count
+        10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = PlayerCollectionViewCell.cell(for: collectionView, at: indexPath) {
-            cell.product = products[indexPath.row]
+        if let cell = HomeCollectionViewCell.cell(for: collectionView, at: indexPath) {
+            let links: [String] = ["37322918484537068605",
+                                 "545063269024623444111",
+                                 "840845422251037567612",
+                                 "11872577020384669352",
+                                 "67482683536103484808",
+                                 "50896561048017056526",
+                                 "14733308977796058393",
+                                 "88933196843442697297",
+                                 "863994649416865203210",
+                                 "91499447547729099884",
+                                 "91555661403983710301",
+                                 "18065816251741380939"]
+            cell.link = links[indexPath.row]
             return cell
         }
-        
         return .init()
     }
 }

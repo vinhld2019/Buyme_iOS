@@ -13,21 +13,10 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     @IBAction func back(_ sender: UIButton) {
         
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.initViews()
-        }
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.interactivePopGestureRecognizer?.delegate = navigationController?.viewControllers.count == 1 ? UIGestureRecognizerDelegateDefault.shared : nil
-    }
-
-    func initViews() {
-        view.backgroundColor = .white
     }
 
     func showLoading(tag: Int = 0) {
@@ -55,4 +44,8 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     func alertViewOk(_ view: AlertView) {
         nothingHandle()
     }
+}
+
+protocol BaseViewControllerCallback: class {
+    func responses(_ viewController: BaseViewController)
 }

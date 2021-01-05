@@ -10,13 +10,15 @@ import UIKit
 
 class ColorUtils: NSObject {
     static let shared = ColorUtils()
+    
+    let red: UIColor = UIColor(rgb: 0xE22B2B)
+    var grey: UIColor = .init(rgb: 0x4C4C4C)
+    let grey1: UIColor = UIColor(rgb: 0x282828)
+    var grey2: UIColor = UIColor(rgb: 0x7C7C7C)
+    var grey3: UIColor = UIColor(rgb: 0xB3B3B3)
 
     let appColor: UIColor = UIColor(rgb: 0xFBBC05)
-    let gray1: UIColor = UIColor(rgb: 0x707070)
-    let gray2: UIColor = UIColor(rgb: 0xDDDDDD)
-    let gray3: UIColor = UIColor(rgb: 0xEEEEEE)
     
-    let red: UIColor = UIColor(rgb: 0xAE1C3F)
     var gray: UIColor = .gray
     var green: UIColor = .green
 }

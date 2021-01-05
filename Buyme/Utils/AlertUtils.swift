@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class VinhLDTest {
+    
+    func test1() {
+        
+    }
+    
+    func test2() {
+        
+    }
+    
+}
