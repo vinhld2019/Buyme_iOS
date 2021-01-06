@@ -128,6 +128,22 @@
 		5DD9884C218FDCAE006342F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD9884A218FDCAE006342F0 /* LaunchScreen.storyboard */; };
 		5DD98857218FDCAF006342F0 /* BuymeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD98856218FDCAF006342F0 /* BuymeTests.swift */; };
 		5DD98862218FDCAF006342F0 /* BuymeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD98861218FDCAF006342F0 /* BuymeUITests.swift */; };
+		A962B4B425A56D1B000CFBDD /* 294501242154012804983.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4B225A56AC4000CFBDD /* 294501242154012804983.mp4 */; };
+		A962B4B525A56D2D000CFBDD /* 52447502271100128276.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4B125A56AC4000CFBDD /* 52447502271100128276.mp4 */; };
+		A962B4B625A56D30000CFBDD /* 33739304879452671789.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4A525A56AC1000CFBDD /* 33739304879452671789.mp4 */; };
+		A962B4B725A56D32000CFBDD /* 623492046878464101990.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4B025A56AC3000CFBDD /* 623492046878464101990.mp4 */; };
+		A962B4B825A56D34000CFBDD /* 88417596391045463788.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4AE25A56AC3000CFBDD /* 88417596391045463788.mp4 */; };
+		A962B4B925A56D38000CFBDD /* 125031647035304628382.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4AD25A56AC3000CFBDD /* 125031647035304628382.mp4 */; };
+		A962B4BA25A56D3A000CFBDD /* 399628389825030905179.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4A825A56AC2000CFBDD /* 399628389825030905179.mp4 */; };
+		A962B4BB25A56D3C000CFBDD /* 31425019493017703287.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4B325A56AC4000CFBDD /* 31425019493017703287.mp4 */; };
+		A962B4BC25A56D3F000CFBDD /* 804507111835993576877.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4A625A56AC1000CFBDD /* 804507111835993576877.mp4 */; };
+		A962B4BD25A56D41000CFBDD /* 836387204350753913178.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4A725A56AC2000CFBDD /* 836387204350753913178.mp4 */; };
+		A962B4BE25A56D45000CFBDD /* 249189126873640619585.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4AB25A56AC2000CFBDD /* 249189126873640619585.mp4 */; };
+		A962B4BF25A56D4A000CFBDD /* 813227380460278052086.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4A925A56AC2000CFBDD /* 813227380460278052086.mp4 */; };
+		A962B4C025A56D4A000CFBDD /* 77168146100102885784.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4A425A56AC1000CFBDD /* 77168146100102885784.mp4 */; };
+		A962B4C125A56D4A000CFBDD /* 557730235596964779791.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4AA25A56AC2000CFBDD /* 557730235596964779791.mp4 */; };
+		A962B4C225A56D4A000CFBDD /* 465717446220362513681.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4AF25A56AC3000CFBDD /* 465717446220362513681.mp4 */; };
+		A962B4C325A56D4A000CFBDD /* 780730425841364500480.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A962B4AC25A56AC3000CFBDD /* 780730425841364500480.mp4 */; };
 		A967DB9825724F0D00EAC002 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A967DB9725724F0D00EAC002 /* fa-solid-900.ttf */; };
 /* End PBXBuildFile section */
 
@@ -280,6 +296,22 @@
 		5DD98863218FDCAF006342F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E2762F9ACED7F5685C58487 /* Pods-Buyme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buyme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Buyme/Pods-Buyme.release.xcconfig"; sourceTree = "<group>"; };
 		96E410EC5B678CBAF6808AB9 /* Pods_Buyme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Buyme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A962B4A425A56AC1000CFBDD /* 77168146100102885784.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 77168146100102885784.mp4; sourceTree = "<group>"; };
+		A962B4A525A56AC1000CFBDD /* 33739304879452671789.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 33739304879452671789.mp4; sourceTree = "<group>"; };
+		A962B4A625A56AC1000CFBDD /* 804507111835993576877.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 804507111835993576877.mp4; sourceTree = "<group>"; };
+		A962B4A725A56AC2000CFBDD /* 836387204350753913178.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 836387204350753913178.mp4; sourceTree = "<group>"; };
+		A962B4A825A56AC2000CFBDD /* 399628389825030905179.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 399628389825030905179.mp4; sourceTree = "<group>"; };
+		A962B4A925A56AC2000CFBDD /* 813227380460278052086.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 813227380460278052086.mp4; sourceTree = "<group>"; };
+		A962B4AA25A56AC2000CFBDD /* 557730235596964779791.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 557730235596964779791.mp4; sourceTree = "<group>"; };
+		A962B4AB25A56AC2000CFBDD /* 249189126873640619585.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 249189126873640619585.mp4; sourceTree = "<group>"; };
+		A962B4AC25A56AC3000CFBDD /* 780730425841364500480.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 780730425841364500480.mp4; sourceTree = "<group>"; };
+		A962B4AD25A56AC3000CFBDD /* 125031647035304628382.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 125031647035304628382.mp4; sourceTree = "<group>"; };
+		A962B4AE25A56AC3000CFBDD /* 88417596391045463788.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 88417596391045463788.mp4; sourceTree = "<group>"; };
+		A962B4AF25A56AC3000CFBDD /* 465717446220362513681.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 465717446220362513681.mp4; sourceTree = "<group>"; };
+		A962B4B025A56AC3000CFBDD /* 623492046878464101990.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 623492046878464101990.mp4; sourceTree = "<group>"; };
+		A962B4B125A56AC4000CFBDD /* 52447502271100128276.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 52447502271100128276.mp4; sourceTree = "<group>"; };
+		A962B4B225A56AC4000CFBDD /* 294501242154012804983.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 294501242154012804983.mp4; sourceTree = "<group>"; };
+		A962B4B325A56AC4000CFBDD /* 31425019493017703287.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 31425019493017703287.mp4; sourceTree = "<group>"; };
 		A967DB9725724F0D00EAC002 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		F0F815679BCAE7E9DC0DB430 /* Pods-Buyme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Buyme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Buyme/Pods-Buyme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -527,6 +559,22 @@
 		15B8DAB124EE26B800BCDC76 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A962B4A925A56AC2000CFBDD /* 813227380460278052086.mp4 */,
+				A962B4A425A56AC1000CFBDD /* 77168146100102885784.mp4 */,
+				A962B4AA25A56AC2000CFBDD /* 557730235596964779791.mp4 */,
+				A962B4AF25A56AC3000CFBDD /* 465717446220362513681.mp4 */,
+				A962B4AC25A56AC3000CFBDD /* 780730425841364500480.mp4 */,
+				A962B4A725A56AC2000CFBDD /* 836387204350753913178.mp4 */,
+				A962B4AB25A56AC2000CFBDD /* 249189126873640619585.mp4 */,
+				A962B4A625A56AC1000CFBDD /* 804507111835993576877.mp4 */,
+				A962B4A825A56AC2000CFBDD /* 399628389825030905179.mp4 */,
+				A962B4B325A56AC4000CFBDD /* 31425019493017703287.mp4 */,
+				A962B4AD25A56AC3000CFBDD /* 125031647035304628382.mp4 */,
+				A962B4AE25A56AC3000CFBDD /* 88417596391045463788.mp4 */,
+				A962B4B025A56AC3000CFBDD /* 623492046878464101990.mp4 */,
+				A962B4A525A56AC1000CFBDD /* 33739304879452671789.mp4 */,
+				A962B4B125A56AC4000CFBDD /* 52447502271100128276.mp4 */,
+				A962B4B225A56AC4000CFBDD /* 294501242154012804983.mp4 */,
 				15A5041125A48F5400C2F20A /* download1.mp4 */,
 				15A5041025A48F5400C2F20A /* download2.mp4 */,
 				15A5040F25A48F5400C2F20A /* download3.mp4 */,
@@ -815,17 +863,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A962B4B625A56D30000CFBDD /* 33739304879452671789.mp4 in Resources */,
+				A962B4B525A56D2D000CFBDD /* 52447502271100128276.mp4 in Resources */,
 				15B738BB258F9CCA00DDA4F1 /* SFProText-Regular.ttf in Resources */,
+				A962B4C225A56D4A000CFBDD /* 465717446220362513681.mp4 in Resources */,
 				15B738BC258F9CCA00DDA4F1 /* SFProText-Semibold.ttf in Resources */,
 				1521336825765FB0005F98A6 /* 37322918484537068605.mp4 in Resources */,
+				A962B4BF25A56D4A000CFBDD /* 813227380460278052086.mp4 in Resources */,
+				A962B4C325A56D4A000CFBDD /* 780730425841364500480.mp4 in Resources */,
+				A962B4B925A56D38000CFBDD /* 125031647035304628382.mp4 in Resources */,
 				1521336925765FB0005F98A6 /* 545063269024623444111.mp4 in Resources */,
+				A962B4BB25A56D3C000CFBDD /* 31425019493017703287.mp4 in Resources */,
 				1521336A25765FB0005F98A6 /* 840845422251037567612.mp4 in Resources */,
 				15A5041425A48F5400C2F20A /* download1.mp4 in Resources */,
 				1521336B25765FB0005F98A6 /* 11872577020384669352.mp4 in Resources */,
 				1521336C25765FB0005F98A6 /* 67482683536103484808.mp4 in Resources */,
 				15CD211A259A36CD00FC58BA /* download.mp4 in Resources */,
 				1521336D25765FB0005F98A6 /* 50896561048017056526.mp4 in Resources */,
+				A962B4B425A56D1B000CFBDD /* 294501242154012804983.mp4 in Resources */,
 				15C1E3552590563400D4AF20 /* CommentTableViewCell.xib in Resources */,
+				A962B4B725A56D32000CFBDD /* 623492046878464101990.mp4 in Resources */,
 				15A1985825A1DDCE00A57F97 /* DiscoverSuggestCollectionViewCell.xib in Resources */,
 				158058AC2590A9F2000D461A /* SellerViewController.xib in Resources */,
 				15ED5EE7259976DD007F155C /* ProductViewController.xib in Resources */,
@@ -837,12 +894,17 @@
 				1521337025765FB0005F98A6 /* 863994649416865203210.mp4 in Resources */,
 				15A5041225A48F5400C2F20A /* download3.mp4 in Resources */,
 				15B738C4258F9DF300DDA4F1 /* SFProText-Medium.ttf in Resources */,
+				A962B4C025A56D4A000CFBDD /* 77168146100102885784.mp4 in Resources */,
 				15ED5EED25999005007F155C /* ProductListCollectionViewCell.xib in Resources */,
 				1521337125765FB0005F98A6 /* 91499447547729099884.mp4 in Resources */,
 				15BBC872259B297700D0CD2F /* PageControlCollectionViewCell.xib in Resources */,
+				A962B4B825A56D34000CFBDD /* 88417596391045463788.mp4 in Resources */,
+				A962B4BE25A56D45000CFBDD /* 249189126873640619585.mp4 in Resources */,
 				15B738DD258FAA3F00DDA4F1 /* HomeCollectionViewCell.xib in Resources */,
 				1521337225765FB0005F98A6 /* 91555661403983710301.mp4 in Resources */,
 				15ED5EE925997B32007F155C /* SFProText-Bold.ttf in Resources */,
+				A962B4BD25A56D41000CFBDD /* 836387204350753913178.mp4 in Resources */,
+				A962B4BA25A56D3A000CFBDD /* 399628389825030905179.mp4 in Resources */,
 				1521335C25765ED2005F98A6 /* 18065816251741380939.mp4 in Resources */,
 				00889D862428903700CDBDCC /* Main.storyboard in Resources */,
 				15A1984E25A19F2C00A57F97 /* AddCartViewController.xib in Resources */,
@@ -851,6 +913,7 @@
 				A967DB9825724F0D00EAC002 /* fa-solid-900.ttf in Resources */,
 				15B7386C258F600300DDA4F1 /* TabBarViewController.xib in Resources */,
 				15C1E35125904E1700D4AF20 /* CommentViewController.xib in Resources */,
+				A962B4BC25A56D3F000CFBDD /* 804507111835993576877.mp4 in Resources */,
 				15B8DAB424EE26E700BCDC76 /* InfoPlist.strings in Resources */,
 				009A31C52428C78F0012CF30 /* Localizable.strings in Resources */,
 				5DD98849218FDCAE006342F0 /* Assets.xcassets in Resources */,
@@ -860,6 +923,7 @@
 				15B73882258F620400DDA4F1 /* DiscoverViewController.xib in Resources */,
 				15BBC874259B2CBF00D0CD2F /* PagerView.xib in Resources */,
 				15BBC878259B2DFD00D0CD2F /* BannerCollectionViewCell.xib in Resources */,
+				A962B4C125A56D4A000CFBDD /* 557730235596964779791.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

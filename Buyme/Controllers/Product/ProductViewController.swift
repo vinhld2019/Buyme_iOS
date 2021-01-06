@@ -46,10 +46,18 @@ class ProductViewController: BaseViewController {
         collectionView.reloadData()
     }
     
-    var videos: [Video] = [.init(link: "download", image: "image", text: "@victoriavaldez046"),
-                           .init(link: "download1", image: "image1", text: "@sol_leon21"),
-                           .init(link: "download2", image: "image2", text: "@carmenaurora01"),
-                           .init(link: "download3", image: "image3", text: "@kryramirez")]
+    var videos: [Video] = [
+         .init(link: "91499447547729099884", image: "image1", text: "@sol_leon21"),
+        .init(link: "52447502271100128276", image: "image", text: "@victoriavaldez046"),
+        .init(link: "780730425841364500480", image: "image2", text: "@carmenaurora01"),
+        .init(link: "77168146100102885784", image: "image3", text: "@kryramirez"),
+        .init(link: "31425019493017703287", image: "image2", text: "@carmenaurora01"),
+        .init(link: "813227380460278052086", image: "image2", text: "@carmenaurora01"),
+        .init(link: "31425019493017703287", image: "image2", text: "@carmenaurora01"),
+        .init(link: "623492046878464101990", image: "image2", text: "@carmenaurora01"),
+        .init(link: "840845422251037567612", image: "image2", text: "@carmenaurora01"),
+  
+    ]
     var currentIndex: Int = 0
     var percent: CGFloat = 0
     
@@ -57,7 +65,8 @@ class ProductViewController: BaseViewController {
     
     private func selectVideo(_ row: Int, isPlay: Bool = true) {
         percent = 0
-        if let link = videos[row].link, let path = Bundle.main.path(forResource: link, ofType: "mp4") {
+       
+        if let link = videos.randomElement()?.link, let path = Bundle.main.path(forResource: link, ofType: "mp4") {
             let url = URL(fileURLWithPath: path)
             player.setVideo(resource: .init(url: url))
             isPlay ? play() : pause()
@@ -75,10 +84,10 @@ class ProductViewController: BaseViewController {
             navigationController?.popViewController(animated: true)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         player.delegate = self
         ProductListCollectionViewCell.register(collectionView)
         selectVideo(0, isPlay: false)
@@ -88,7 +97,7 @@ class ProductViewController: BaseViewController {
         likeButton.delegate = self
         cartButton.delegate = self
     }
-
+    
 }
 
 extension ProductViewController: BMPlayerDelegate {
