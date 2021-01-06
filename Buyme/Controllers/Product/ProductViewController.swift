@@ -47,15 +47,10 @@ class ProductViewController: BaseViewController {
     }
     
     var videos: [Video] = [
-         .init(link: "91499447547729099884", image: "image1", text: "@sol_leon21"),
-        .init(link: "52447502271100128276", image: "image", text: "@victoriavaldez046"),
-        .init(link: "780730425841364500480", image: "image2", text: "@carmenaurora01"),
-        .init(link: "77168146100102885784", image: "image3", text: "@kryramirez"),
-        .init(link: "31425019493017703287", image: "image2", text: "@carmenaurora01"),
-        .init(link: "813227380460278052086", image: "image2", text: "@carmenaurora01"),
-        .init(link: "31425019493017703287", image: "image2", text: "@carmenaurora01"),
-        .init(link: "623492046878464101990", image: "image2", text: "@carmenaurora01"),
-        .init(link: "840845422251037567612", image: "image2", text: "@carmenaurora01"),
+        .init(link: "2264573369693", image: "image2", text: "@carmenaurora01"),
+        .init(link: "2264574824653", image: "image2", text: "@carmenaurora01"),
+        .init(link: "2264575020073", image: "image2", text: "@carmenaurora01"),
+        .init(link: "2264575346626", image: "image2", text: "@carmenaurora01"),
   
     ]
     var currentIndex: Int = 0
