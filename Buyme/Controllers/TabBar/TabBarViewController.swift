@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: BaseViewController {
     
     @IBOutlet weak var tabBarView: UIView!
     
@@ -20,6 +20,11 @@ class TabBarViewController: UIViewController {
     }
     
     private func moveItem(for key: TabBarItemKey) {
+        if key == .cart {
+            navigationController?.pushViewController(key.viewController.init(), animated: true)
+            return
+        }
+        
         if key.rawValue == currentIndex {
             return
         }

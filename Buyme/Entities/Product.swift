@@ -21,4 +21,20 @@ class Product {
         self.description = description
         self.cost = cost
     }
+    
+    init() {}
+    
+    var count: Int = 1
+}
+
+class Seller {
+    var name: String?
+    var image: String?
+    var products: [Product] = []
+    
+    init(name: String, image: String, products: [Product]) {
+        self.name = name
+        self.image = image
+        self.products = products
+    }
 }

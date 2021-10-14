@@ -31,7 +31,7 @@ class NavigationController: UINavigationController {
     }
 
     func initialization() {
-        setViewControllers([TabBarViewController()], animated: false)
+        setViewControllers([StartShoppingViewController()], animated: false)
     }
 }
 

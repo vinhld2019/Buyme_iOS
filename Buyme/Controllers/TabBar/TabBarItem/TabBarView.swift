@@ -28,6 +28,9 @@ class TabBarView: BaseView {
         
         for index in 0...titles.count-1 {
             let item: TabBarItemView = .init()
+            if index > 1 {
+                item.badge = index * 3
+            }
             addSubview(item)
             item.image = UIImage(named: images[index])
             item.text = titles[index]

@@ -10,8 +10,14 @@ import UIKit
 
 class SellerViewController: BaseViewController {
     
+    @IBOutlet weak var searchView: SearchView!
     @IBOutlet weak var vuaxemCollectionView: UICollectionView!
     @IBOutlet weak var shopCollectionView: UICollectionView!
+    
+    @IBOutlet weak var hightlightButtonLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var shopButton: UIButton!
+    @IBOutlet weak var danhmucButton: UIButton!
+    private lazy var buttons: [UIButton] = { [shopButton, danhmucButton] }()
     
     @IBAction func follow(_ sender: UIButton) {
         let selected = !sender.isSelected
@@ -27,17 +33,31 @@ class SellerViewController: BaseViewController {
         }
     }
     
+    @IBAction func changeTab(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3) {
+            self.hightlightButtonLeadingConstraint.constant = sender.frame.origin.x
+        }
+
+        let tag = sender.tag
+        for button in buttons {
+            button.isSelected = button.tag == tag
+        }
+        shopCollectionView.reloadData()
+    }
+    
     var backAction: (() -> Void)?
-    var videos: [Video] = [.init(link: "download", image: "image", text: "@victoriavaldez046"),
-                           .init(link: "download1", image: "image1", text: "@sol_leon21"),
-                           .init(link: "download2", image: "image2", text: "@carmenaurora01"),
-                           .init(link: "download3", image: "image3", text: "@kryramirez")]
+    var videos: [Video] { randomVideos }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchView.selection = {
+            self.navigationController?.pushViewController(SellerSearchViewController(), animated: true)
+        }
+        
         ProductListCollectionViewCell.register(vuaxemCollectionView)
         SellerShopCollectionViewCell.register(shopCollectionView)
+        DanhMucCollectionViewCell.register(shopCollectionView)
     }
 
 }
@@ -46,11 +66,19 @@ extension SellerViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let tag = collectionView.tag
         if tag == 0 {
-            return .init(width: 130, height: 120)
+            return .init(width: 100, height: 120)
         }
         
-        let width = (collectionView.bounds.size.width - 10) / 3
-        return .init(width: width, height: width * 146 / 124)
+        if tag == 1 {
+            if shopButton.isSelected {
+                let width = (collectionView.bounds.size.width - 10) / 3
+                return .init(width: width, height: width * 146 / 124)
+            }
+            if danhmucButton.isSelected {
+                return .init(width: collectionView.bounds.size.width, height: 70)
+            }
+        }
+        return .zero
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -62,13 +90,32 @@ extension SellerViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let tag = collectionView.tag
+        if tag == 1 {
+            if danhmucButton.isSelected {
+                navigationController?.pushViewController(DanhMucViewController(), animated: true)
+                return
+            }
+        }
         navigationController?.pushViewController(ProductViewController(), animated: true)
     }
 }
 
 extension SellerViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        collectionView.tag == 0 ? videos.count : 100
+        let tag = collectionView.tag
+        if tag == 0 { return videos.count }
+        
+        if tag == 1 {
+            if shopButton.isSelected {
+                return 100
+            }
+            if danhmucButton.isSelected {
+                return 7
+            }
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,8 +125,14 @@ extension SellerViewController: UICollectionViewDataSource {
             return cell
         }
         
-        if tag == 1, let cell = SellerShopCollectionViewCell.cell(for: collectionView, at: indexPath) {
-            return cell
+        if tag == 1 {
+            if shopButton.isSelected, let cell = SellerShopCollectionViewCell.cell(for: collectionView, at: indexPath) {
+                return cell
+            }
+            
+            if danhmucButton.isSelected, let cell = DanhMucCollectionViewCell.cell(for: collectionView, at: indexPath) {
+                return cell
+            }
         }
         
         return .init()

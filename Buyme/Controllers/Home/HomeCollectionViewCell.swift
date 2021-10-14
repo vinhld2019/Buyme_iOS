@@ -18,6 +18,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var likeButton: PlayerButton!
     @IBOutlet weak var cartButton: PlayerButton!
     
+    @IBOutlet weak var rightActionView: UIView!
+    @IBOutlet weak var bottomActionView: UIView!
+    
     @IBAction func viewSeller(_ sender: UIButton) {
         let vc = SellerViewController()
         navigation?.pushViewController(vc, animated: true)
@@ -51,6 +54,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
     func pause() {
         playImageView.isHidden = false
         player.pause()
+    }
+    
+    func updateDisplayActions() {
+        rightActionView.isHidden = playerActionIsHidden
+        bottomActionView.isHidden = playerActionIsHidden
     }
 
     override func awakeFromNib() {

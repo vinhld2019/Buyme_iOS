@@ -18,6 +18,10 @@ class BaseViewController: UIViewController, AlertViewDelegate {
         super.viewDidAppear(animated)
         navigationController?.interactivePopGestureRecognizer?.delegate = navigationController?.viewControllers.count == 1 ? UIGestureRecognizerDelegateDefault.shared : nil
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     func showLoading(tag: Int = 0) {
         view.superSuperview.showLoading(tag: tag)
@@ -46,6 +50,6 @@ class BaseViewController: UIViewController, AlertViewDelegate {
     }
 }
 
-protocol BaseViewControllerCallback: class {
+protocol BaseViewControllerCallback: AnyObject {
     func responses(_ viewController: BaseViewController)
 }

@@ -46,13 +46,11 @@ class ProductViewController: BaseViewController {
         collectionView.reloadData()
     }
     
-    var videos: [Video] = [
-        .init(link: "2264573369693", image: "image2", text: "@carmenaurora01"),
-        .init(link: "2264574824653", image: "image2", text: "@carmenaurora01"),
-        .init(link: "2264575020073", image: "image2", text: "@carmenaurora01"),
-        .init(link: "2264575346626", image: "image2", text: "@carmenaurora01"),
-  
-    ]
+    lazy var videos: [Video] = {
+        let vs = randomVideos
+        vs.first?.image = "JW"
+        return vs
+    }()
     var currentIndex: Int = 0
     var percent: CGFloat = 0
     
@@ -61,7 +59,7 @@ class ProductViewController: BaseViewController {
     private func selectVideo(_ row: Int, isPlay: Bool = true) {
         percent = 0
        
-        if let link = videos.randomElement()?.link, let path = Bundle.main.path(forResource: link, ofType: "mp4") {
+        if let link = videos[row].link, let path = Bundle.main.path(forResource: link, ofType: "mp4") {
             let url = URL(fileURLWithPath: path)
             player.setVideo(resource: .init(url: url))
             isPlay ? play() : pause()

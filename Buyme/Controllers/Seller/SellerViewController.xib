@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,6 +25,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SellerViewController" customModule="ibuy_ubuy" customModuleProvider="target">
             <connections>
+                <outlet property="danhmucButton" destination="Vea-oE-Jrv" id="yaM-ig-3zu"/>
+                <outlet property="hightlightButtonLeadingConstraint" destination="HYf-uA-UrR" id="izV-v3-2nc"/>
+                <outlet property="searchView" destination="xMS-Y0-nI1" id="9n4-u2-H5S"/>
+                <outlet property="shopButton" destination="R0c-T7-XOt" id="z1l-fB-ySR"/>
                 <outlet property="shopCollectionView" destination="ctE-SA-1Xq" id="V5a-ZU-NVo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vuaxemCollectionView" destination="qez-pl-dpj" id="NLl-A3-2pm"/>
@@ -49,7 +54,7 @@
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMS-Y0-nI1" customClass="SearchView" customModule="ibuy_ubuy" customModuleProvider="target">
                             <rect key="frame" x="50" y="12.5" width="274" height="35"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="qP2-Rl-0R7"/>
                             </constraints>
@@ -259,7 +264,7 @@ Faceboook - Thuỷ Nguyễn. Based on 279 Phố Huế, HN</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mv-oJ-CRW">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mv-oJ-CRW">
                                                     <rect key="frame" x="254" y="30" width="130" height="35"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -385,60 +390,96 @@ Faceboook - Thuỷ Nguyễn. Based on 279 Phố Huế, HN</string>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZw-NT-A05">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-Dw-6k0">
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0c-T7-XOt">
                                                     <rect key="frame" x="0.0" y="0.0" width="103.5" height="40"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaS-cP-dfT">
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Shop">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="EJK-A6-hhc"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TU-QD-QIJ">
+                                                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="40"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Hot">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-Sq-LYk">
+                                                    <rect key="frame" x="207" y="0.0" width="103.5" height="40"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Ưu đãi">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vea-oE-Jrv">
+                                                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="40"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Danh mục">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changeTab:" destination="-1" eventType="touchUpInside" id="MZd-NB-fp7"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-wx-R0v">
+                                                    <rect key="frame" x="0.0" y="39" width="414" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="lW9-dT-uhX"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaS-cP-dfT" userLabel="Hight Light View">
                                                     <rect key="frame" x="0.0" y="39" width="103.5" height="1"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="8z9-6m-HsS"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh mục" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb1-df-Mfe">
-                                                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="40"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
-                                                    <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ưu đãi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40f-R5-hwp">
-                                                    <rect key="frame" x="207" y="0.0" width="103.5" height="40"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
-                                                    <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxm-BE-L66">
-                                                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="40"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
-                                                    <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Pg6-Dw-6k0" secondAttribute="bottom" id="0Zd-yA-oHT"/>
-                                                <constraint firstAttribute="bottom" secondItem="40f-R5-hwp" secondAttribute="bottom" id="0qr-iV-Nd4"/>
-                                                <constraint firstItem="MaS-cP-dfT" firstAttribute="trailing" secondItem="Pg6-Dw-6k0" secondAttribute="trailing" id="5gR-Fb-kWT"/>
-                                                <constraint firstAttribute="trailing" secondItem="gxm-BE-L66" secondAttribute="trailing" id="6ob-lc-ZpY"/>
-                                                <constraint firstItem="MaS-cP-dfT" firstAttribute="leading" secondItem="Pg6-Dw-6k0" secondAttribute="leading" id="Bcz-BQ-TZ8"/>
-                                                <constraint firstItem="zb1-df-Mfe" firstAttribute="width" secondItem="Pg6-Dw-6k0" secondAttribute="width" id="CTg-hE-Xex"/>
-                                                <constraint firstItem="gxm-BE-L66" firstAttribute="leading" secondItem="40f-R5-hwp" secondAttribute="trailing" id="GmG-DZ-Pup"/>
+                                                <constraint firstItem="4TU-QD-QIJ" firstAttribute="width" secondItem="R0c-T7-XOt" secondAttribute="width" id="0x9-IT-GPd"/>
+                                                <constraint firstItem="HRL-Sq-LYk" firstAttribute="leading" secondItem="4TU-QD-QIJ" secondAttribute="trailing" id="3Og-En-pcD"/>
+                                                <constraint firstAttribute="bottom" secondItem="HRL-Sq-LYk" secondAttribute="bottom" id="58J-5W-n9Q"/>
+                                                <constraint firstItem="4TU-QD-QIJ" firstAttribute="leading" secondItem="R0c-T7-XOt" secondAttribute="trailing" id="5jJ-PZ-IOq"/>
+                                                <constraint firstItem="HRL-Sq-LYk" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="8pD-q1-kA8"/>
+                                                <constraint firstAttribute="bottom" secondItem="R0c-T7-XOt" secondAttribute="bottom" id="AV8-kX-THz"/>
+                                                <constraint firstItem="MaS-cP-dfT" firstAttribute="width" secondItem="R0c-T7-XOt" secondAttribute="width" id="FeP-M1-2lT"/>
+                                                <constraint firstItem="MaS-cP-dfT" firstAttribute="leading" secondItem="QZw-NT-A05" secondAttribute="leading" id="HYf-uA-UrR"/>
+                                                <constraint firstItem="Vea-oE-Jrv" firstAttribute="width" secondItem="HRL-Sq-LYk" secondAttribute="width" id="IhB-7E-Trt"/>
                                                 <constraint firstAttribute="height" constant="40" id="Ixn-83-2ac"/>
-                                                <constraint firstItem="40f-R5-hwp" firstAttribute="leading" secondItem="zb1-df-Mfe" secondAttribute="trailing" id="K2v-Kw-3oo"/>
-                                                <constraint firstItem="gxm-BE-L66" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="M4O-5n-Znt"/>
-                                                <constraint firstItem="zb1-df-Mfe" firstAttribute="leading" secondItem="Pg6-Dw-6k0" secondAttribute="trailing" id="MUZ-4E-yl2"/>
-                                                <constraint firstItem="40f-R5-hwp" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="P42-Eg-4xU"/>
-                                                <constraint firstAttribute="bottom" secondItem="gxm-BE-L66" secondAttribute="bottom" id="SfE-gr-yzK"/>
-                                                <constraint firstItem="zb1-df-Mfe" firstAttribute="width" secondItem="40f-R5-hwp" secondAttribute="width" id="Ual-lW-8mb"/>
-                                                <constraint firstItem="Pg6-Dw-6k0" firstAttribute="leading" secondItem="QZw-NT-A05" secondAttribute="leading" id="aL4-P2-kmT"/>
-                                                <constraint firstItem="Pg6-Dw-6k0" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="beS-GM-iQ8"/>
-                                                <constraint firstItem="zb1-df-Mfe" firstAttribute="width" secondItem="gxm-BE-L66" secondAttribute="width" id="fgK-um-hlF"/>
-                                                <constraint firstItem="zb1-df-Mfe" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="iHC-L3-Rct"/>
-                                                <constraint firstItem="MaS-cP-dfT" firstAttribute="bottom" secondItem="Pg6-Dw-6k0" secondAttribute="bottom" id="kHF-Me-DYh"/>
-                                                <constraint firstAttribute="bottom" secondItem="zb1-df-Mfe" secondAttribute="bottom" id="lAF-lX-2j8"/>
+                                                <constraint firstItem="HRL-Sq-LYk" firstAttribute="width" secondItem="4TU-QD-QIJ" secondAttribute="width" id="JFt-Vd-NL3"/>
+                                                <constraint firstItem="Vea-oE-Jrv" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="JZd-CY-Ohv"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vea-oE-Jrv" secondAttribute="bottom" id="N6p-ph-lWg"/>
+                                                <constraint firstAttribute="bottom" secondItem="aT6-wx-R0v" secondAttribute="bottom" id="SiC-Ga-8Xl"/>
+                                                <constraint firstItem="R0c-T7-XOt" firstAttribute="leading" secondItem="QZw-NT-A05" secondAttribute="leading" id="Wfa-mZ-eV5"/>
+                                                <constraint firstAttribute="bottom" secondItem="4TU-QD-QIJ" secondAttribute="bottom" id="Wwu-jg-0qx"/>
+                                                <constraint firstItem="4TU-QD-QIJ" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="XBy-mN-EHk"/>
+                                                <constraint firstAttribute="bottom" secondItem="MaS-cP-dfT" secondAttribute="bottom" id="bmC-ih-AU6"/>
+                                                <constraint firstItem="Vea-oE-Jrv" firstAttribute="leading" secondItem="HRL-Sq-LYk" secondAttribute="trailing" id="dsP-yB-jKa"/>
+                                                <constraint firstItem="aT6-wx-R0v" firstAttribute="leading" secondItem="QZw-NT-A05" secondAttribute="leading" id="qSB-uP-hFI"/>
+                                                <constraint firstItem="R0c-T7-XOt" firstAttribute="top" secondItem="QZw-NT-A05" secondAttribute="top" id="vqK-We-YrG"/>
+                                                <constraint firstAttribute="trailing" secondItem="aT6-wx-R0v" secondAttribute="trailing" id="wXI-HD-cFh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vea-oE-Jrv" secondAttribute="trailing" id="xil-H0-CVo"/>
                                             </constraints>
                                         </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ctE-SA-1Xq">
@@ -491,6 +532,7 @@ Faceboook - Thuỷ Nguyễn. Based on 279 Phố Huế, HN</string>
                     </constraints>
                 </scrollView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="8ui-l2-3jz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5cU-dY-tS9"/>
@@ -503,7 +545,6 @@ Faceboook - Thuỷ Nguyễn. Based on 279 Phố Huế, HN</string>
                 <constraint firstItem="8ui-l2-3jz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dz9-fh-CLb"/>
                 <constraint firstItem="8ui-l2-3jz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pjc-oB-5MI"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="123" y="66"/>
         </view>
     </objects>
@@ -513,5 +554,8 @@ Faceboook - Thuỷ Nguyễn. Based on 279 Phố Huế, HN</string>
         <image name="SellerCamera" width="20" height="20"/>
         <image name="SellerChat" width="24" height="24"/>
         <image name="SellerMore" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

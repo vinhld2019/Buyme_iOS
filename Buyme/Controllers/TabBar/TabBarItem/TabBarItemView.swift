@@ -33,6 +33,8 @@ class TabBarItemView: BaseView {
         }
     }
     
+    var badge: Int?
+    
     override func initialization() {
         super.initialization()
         
@@ -62,6 +64,28 @@ class TabBarItemView: BaseView {
             make.height.equalTo(1)
         }
         view.backgroundColor = ColorUtils.shared.grey1
+        
+        if let badge = badge {
+            let badgeView = UIView()
+            addSubview(badgeView)
+            badgeView.snp.makeConstraints {
+                $0.centerY.equalTo(imageView.snp.top)
+                $0.centerX.equalTo(imageView.snp.right)
+                $0.height.width.equalTo(16)
+            }
+            badgeView.backgroundColor = .red
+            badgeView.cornerRadius = 8
+            
+            let badgeLabel = UILabel()
+            badgeView.addSubview(badgeLabel)
+            badgeLabel.snp.makeConstraints {
+                $0.center.equalToSuperview()
+            }
+            badgeLabel.textColor = .white
+            badgeLabel.font = .systemFont(ofSize: 10)
+            badgeLabel.text = "\(badge)"
+        }
+        
     }
     
 }

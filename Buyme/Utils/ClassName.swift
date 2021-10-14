@@ -21,14 +21,12 @@ extension ClassNameable {
         return UINib(nibName: Self.className, bundle: nil)
     }
     
-    static func register(_ view: UICollectionView) {
-        view.register(nib, forCellWithReuseIdentifier: className)
+    var navigation: NavigationController? {
+        AppUtils.shared.navigationController
     }
-    
-    static func cell(for view: UICollectionView, at indextPath: IndexPath) -> Self? {
-        view.dequeueReusableCell(withReuseIdentifier: className, for: indextPath) as? Self
-    }
-    
+}
+
+extension ClassNameable where Self: UITableViewCell {
     static func register(_ view: UITableView) {
         view.register(nib, forCellReuseIdentifier: className)
     }
@@ -36,9 +34,15 @@ extension ClassNameable {
     static func cell(for view: UITableView, at indexPath: IndexPath) -> Self? {
         view.dequeueReusableCell(withIdentifier: className, for: indexPath) as? Self
     }
+}
+
+extension ClassNameable where Self: UICollectionViewCell {
+    static func register(_ view: UICollectionView) {
+        view.register(nib, forCellWithReuseIdentifier: className)
+    }
     
-    var navigation: NavigationController? {
-        AppUtils.shared.navigationController
+    static func cell(for view: UICollectionView, at indextPath: IndexPath) -> Self? {
+        view.dequeueReusableCell(withReuseIdentifier: className, for: indextPath) as? Self
     }
 }
 

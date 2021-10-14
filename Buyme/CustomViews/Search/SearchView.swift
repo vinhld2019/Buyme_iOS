@@ -12,6 +12,14 @@ class SearchView: BaseView {
     
     var selection: (() -> Void)?
     
+    var label = Label()
+    
+    @IBInspectable var placeholder: String? {
+        didSet {
+            label.text = placeholder
+        }
+    }
+    
     override func initialization() {
         backgroundColor = ColorUtils.shared.grey1
         cornerRadius = 2
@@ -25,7 +33,6 @@ class SearchView: BaseView {
         }
         image.contentMode = .scaleAspectFit
         
-        let label = Label()
         addSubview(label)
         label.snp.makeConstraints { make in
             make.top.right.bottom.equalToSuperview()

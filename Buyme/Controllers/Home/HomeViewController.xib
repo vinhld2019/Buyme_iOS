@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,8 +17,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ibuy_ubuy" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="HPm-uN-VZe" id="bZT-n3-FxC"/>
+                <outlet property="fabButton" destination="Kfl-4f-p5N" id="t9o-L2-bhS"/>
+                <outlet property="fabView" destination="xsI-cR-N4Y" id="1LC-L9-rYb"/>
                 <outlet property="followingButton" destination="hfz-i2-3Wg" id="CuG-Rd-4cO"/>
                 <outlet property="followingCollectionView" destination="Ge4-tT-AHM" id="H2z-89-mMR"/>
+                <outlet property="headTabView" destination="lbS-Mb-dGj" id="kxU-eu-Xz5"/>
                 <outlet property="suggestingButton" destination="mYc-Sr-fH9" id="Ll2-r6-0yL"/>
                 <outlet property="suggestingCollectionView" destination="IAp-Hu-XQj" id="h8R-gS-GFM"/>
                 <outlet property="tabBarView" destination="JIe-6W-Quc" id="TxJ-Oc-Jvu"/>
@@ -96,13 +100,13 @@
                                 <constraint firstAttribute="trailing" secondItem="BMo-d7-D4b" secondAttribute="trailing" id="meD-td-mZc"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-Mb-dGj">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbS-Mb-dGj">
                             <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-QJ-0JC">
                                     <rect key="frame" x="0.0" y="0.0" width="137.5" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYc-Sr-fH9">
+                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYc-Sr-fH9">
                                             <rect key="frame" x="0.0" y="0.0" width="137.5" height="60"/>
                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -136,7 +140,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c88-NY-8nM">
                                     <rect key="frame" x="138.5" y="0.0" width="137" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-i2-3Wg">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-i2-3Wg">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="60"/>
                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,7 +174,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keH-lk-Kej">
                                     <rect key="frame" x="276.5" y="0.0" width="137.5" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu4-HJ-FQH">
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu4-HJ-FQH">
                                             <rect key="frame" x="0.0" y="0.0" width="137.5" height="60"/>
                                             <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="14"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,7 +198,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="28o-7R-fUg" firstAttribute="centerY" secondItem="hMO-QJ-0JC" secondAttribute="centerY" id="2DL-vi-WkS"/>
                                 <constraint firstItem="keH-lk-Kej" firstAttribute="width" secondItem="hMO-QJ-0JC" secondAttribute="width" id="4kj-dS-MbG"/>
@@ -217,7 +221,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-6W-Quc" customClass="TabBarView" customModule="ibuy_ubuy" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="802" width="414" height="60"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Oqu-Jl-oES"/>
                             </constraints>
@@ -238,18 +242,63 @@
                         <outletCollection property="gestureRecognizers" destination="aK7-Yk-CWT" appends="YES" id="aMX-zT-iJa"/>
                     </connections>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsI-cR-N4Y">
+                    <rect key="frame" x="177" y="702" width="60" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-gG-ovQ">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProductCartBuy" translatesAutoresizingMaskIntoConstraints="NO" id="EUB-iu-4dB">
+                            <rect key="frame" x="15" y="15" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="CW7-mP-0OP"/>
+                                <constraint firstAttribute="height" constant="30" id="Zrt-Hq-5Tg"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfl-4f-p5N">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <color key="tintColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="fab:" destination="-1" eventType="touchUpInside" id="zTA-Vj-D6K"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NeQ-gG-ovQ" secondAttribute="bottom" id="27F-Zi-IA5"/>
+                        <constraint firstAttribute="width" constant="60" id="7Qj-ZP-mEY"/>
+                        <constraint firstItem="Kfl-4f-p5N" firstAttribute="centerX" secondItem="xsI-cR-N4Y" secondAttribute="centerX" id="KQn-Yl-p2n"/>
+                        <constraint firstItem="NeQ-gG-ovQ" firstAttribute="leading" secondItem="xsI-cR-N4Y" secondAttribute="leading" id="PUk-71-eal"/>
+                        <constraint firstAttribute="trailing" secondItem="NeQ-gG-ovQ" secondAttribute="trailing" id="R9b-yM-5dS"/>
+                        <constraint firstItem="Kfl-4f-p5N" firstAttribute="height" secondItem="xsI-cR-N4Y" secondAttribute="height" id="cfS-h4-zBT"/>
+                        <constraint firstItem="EUB-iu-4dB" firstAttribute="centerY" secondItem="xsI-cR-N4Y" secondAttribute="centerY" id="cns-Pb-LRD"/>
+                        <constraint firstItem="NeQ-gG-ovQ" firstAttribute="top" secondItem="xsI-cR-N4Y" secondAttribute="top" id="j6M-wa-v5y"/>
+                        <constraint firstItem="EUB-iu-4dB" firstAttribute="centerX" secondItem="xsI-cR-N4Y" secondAttribute="centerX" id="ntd-ic-0FR"/>
+                        <constraint firstItem="Kfl-4f-p5N" firstAttribute="width" secondItem="xsI-cR-N4Y" secondAttribute="width" id="pt8-eq-gaA"/>
+                        <constraint firstItem="Kfl-4f-p5N" firstAttribute="centerY" secondItem="xsI-cR-N4Y" secondAttribute="centerY" id="qYs-oQ-osy"/>
+                        <constraint firstAttribute="height" constant="60" id="qa0-51-uU1"/>
+                    </constraints>
+                </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xsI-cR-N4Y" secondAttribute="bottom" constant="100" id="87I-qm-QOR"/>
                 <constraint firstItem="JIe-6W-Quc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="D3G-Y7-IVO"/>
                 <constraint firstItem="HPm-uN-VZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FK2-bB-eNk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="lbS-Mb-dGj" secondAttribute="top" id="HZw-PN-Qlx"/>
                 <constraint firstItem="HPm-uN-VZe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eRI-i9-Z0g"/>
                 <constraint firstAttribute="bottom" secondItem="HPm-uN-VZe" secondAttribute="bottom" id="f1M-Ey-gaR"/>
                 <constraint firstItem="aIU-Yo-0B3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="q1R-xK-Bxy"/>
+                <constraint firstItem="xsI-cR-N4Y" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rDF-99-3m7"/>
                 <constraint firstItem="HPm-uN-VZe" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="2" id="sSa-YD-Kiw"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-972" y="325"/>
         </view>
         <panGestureRecognizer minimumNumberOfTouches="1" id="aK7-Yk-CWT">
@@ -258,4 +307,10 @@
             </connections>
         </panGestureRecognizer>
     </objects>
+    <resources>
+        <image name="ProductCartBuy" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

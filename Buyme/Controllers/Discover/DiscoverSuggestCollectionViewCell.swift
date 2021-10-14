@@ -8,11 +8,19 @@
 
 import UIKit
 
+var idTag = 0
+
 class DiscoverSuggestCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let tag = idTag % 18
+        idTag += 1
+        let id = tag < 10 ? "0\(tag)" : "\(tag)"
+        imageView.image = UIImage(named: "ID\(id)")
     }
 
 }

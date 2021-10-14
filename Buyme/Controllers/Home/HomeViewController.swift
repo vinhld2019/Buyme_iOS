@@ -13,6 +13,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tabBarView: TabBarView!
     
+    @IBOutlet weak var headTabView: UIView!
     @IBOutlet weak var suggestingButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
@@ -20,101 +21,52 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var followingCollectionView: UICollectionView!
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     
-    var links: [String] = [
-         "2264578168350",
-         "2264577653585",
-         "2264577606506",
-         "2264577571678",
-         "2264577330807",
-         "2264577256479",
-         "2264577165089",
-         "2264577104820",
-         "2264577033489",
-         "2264576977681",
-         "2264576907126",
-         "2264576783852",
-         "2264576623838",
-         "2264576556512",
-         "2264576467889",
-         "2264576314124",
-         "2264576144144",
-         "2264576051482",
-         "2264575959630",
-         "2264575815117",
-         "2264575683254",
-         "2264575589166",
-         "2264575527896",
-         "2264575468450",
-         "2264575346626",
-         "2264575149765",
-         "2264575020073",
-         "2264574877709",
-         "2264574824653",
-         "2264574791783",
-         "2264574732567",
-         "2264574629465",
-         "2264574497478",
-         "2264574313708",
-         "2264573973112",
-         "2264573684985",
-         "2264573605690",
-         "2264573544517",
-         "2264573414423",
-         "2264573369693",
-         "2264573335078",
-         "2264573238751",
-         "2264573168685",
-         "2264572959531",
-         "2264572899987",
-         "2264572683817",
-         "2264572642621",
-         "2264572359115",
-         "2264572091747",
-         "2264571852333",
-         "52447502271100128260",
-         "804507111835993576861",
-         "836387204350753913162",
-         "399628389825030905163",
-         "780730425841364500464",
-         "465717446220362513665",
-         "125031647035304628366",
-         "294501242154012804967",
-         "77168146100102885768",
-         "249189126873640619569",
-         "813227380460278052070",
-         "31425019493017703271",
-         "88417596391045463772",
-         "33739304879452671773",
-         "623492046878464101974",
-         "557730235596964779775",
-         "496991303013374896551",
-         "188096544186541333752",
-         "135864306680236995853",
-         "379542672640545230054",
-         "804153058512165488155",
-         "105211142210770024556",
-         "436199957408625077157",
-         "605512630895471937858",
-         "657703138996839326459",
-         "52447502271100128276",
-         "804507111835993576877",
-         "836387204350753913178",
-         "399628389825030905179",
-         "780730425841364500480",
-         "465717446220362513681",
-         "125031647035304628382",
-         "294501242154012804983",
-         "249189126873640619585",
-         "813227380460278052086",
-         "31425019493017703287",
-         "88417596391045463788",
-         "623492046878464101990",
-         "557730235596964779791"
-     ]
+    @IBOutlet weak var fabView: UIView!
+    @IBOutlet weak var fabButton: UIButton!
+    var fabPanGesture: UIPanGestureRecognizer!
+    
+    private func addFabPanGesture() {
+        for view in fabView.subviews where view is UIImageView {
+            (view as? UIImageView)?.image = UIImage(named: "ProductCartBuy")?.withRenderingMode(.alwaysTemplate)
+            view.tintColor = .red
+            break
+        }
+        
+        fabPanGesture = .init(target: self, action: #selector(fabDragged(_:)))
+        fabView.isUserInteractionEnabled = true
+        fabView.addGestureRecognizer(fabPanGesture)
+    }
+    
+    @objc private func fabDragged(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: fabView.superview!)
+        fabView.center = CGPoint(x: fabView.center.x + translation.x, y: fabView.center.y + translation.y)
+        sender.setTranslation(CGPoint.zero, in: fabView.superview!)
+    }
+    
+    lazy var links: [String] = { getLinks }()
     var followingList:[String] = []
     var trendingList:[String] = []
     
+    @IBAction func fab(_ sender: UIButton) {
+        playerActionIsHidden = !playerActionIsHidden
+        currentCell?.updateDisplayActions()
+        headTabView.isHidden = playerActionIsHidden
+        
+        fabView.alpha = 1
+        blurFabWorkingTag += 1
+        blurFab(blurFabWorkingTag)
+    }
     
+    private var blurFabWorkingTag = 0
+    private func blurFab(_ tag: Int) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if tag >= self.blurFabWorkingTag {
+                UIView.animate(withDuration: 0.3) {
+                    self.fabView.alpha = 0.3
+                }
+            }
+        }
+    }
     
     @IBAction func changeContent(_ sender: UIButton) {
         let buttons: [UIButton] = [suggestingButton, followingButton, trendingButton]
@@ -174,14 +126,14 @@ class HomeViewController: BaseViewController {
             if let vc = parent as? TabBarViewController {
                 vc.isTabBarEnable = false
             }
-            //            productViewController.play()
+            fabView.isHidden = true
         } else {
             playCurrentCell()
             if let vc = parent as? TabBarViewController {
                 vc.isTabBarEnable = true
             }
             tabBarView.isHidden = false
-            //            productViewController.pause()
+            fabView.isHidden = false
         }
         let x = childShowing ? -self.contentView.frame.size.width / 2 : 0
         UIView.animate(withDuration: 0.3, animations: {
@@ -230,22 +182,19 @@ class HomeViewController: BaseViewController {
         
         collectionView = suggestingCollectionView
         
-        DispatchQueue.main.async {
-            print(self.view.frame.size.width)
-            print(self.contentView.frame.size.width)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.playCurrentCell()
         }
+        
+        blurFab(0)
+        addFabPanGesture()
+        
+        headTabView.isHidden = playerActionIsHidden
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         currentCell?.pause()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if !view.isHidden {
-            playCurrentCell()
-        }
     }
     
     var collectionView: UICollectionView?
@@ -278,12 +227,15 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         }
         playCurrentCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let cell = cell as? HomeCollectionViewCell {
+            cell.updateDisplayActions()
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
-    
-
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         links.count
     }
@@ -297,15 +249,9 @@ extension HomeViewController: UICollectionViewDataSource {
             }else{
                  cell.link = links[indexPath.row]
             }
+            cell.updateDisplayActions()
             return cell
         }
         return .init()
     }
 }
-
-
-
-
-
-
-
