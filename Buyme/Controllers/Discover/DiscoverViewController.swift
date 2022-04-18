@@ -33,13 +33,16 @@ class DiscoverViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !isSet {
-            isSet = true
-            pagerView.startControl()
-            searchView.selection = {
-                let vc = SearchViewController()
-                vc.modalPresentationStyle = .overFullScreen
-                self.present(vc, animated: true, completion: nil)
+        
+        DispatchQueue.main.async { [unowned self] in
+            if !isSet {
+                isSet = true
+                pagerView.startControl()
+                searchView.selection = {
+                    let vc = SearchViewController()
+                    vc.modalPresentationStyle = .overFullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
             }
         }
     }

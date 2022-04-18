@@ -1658,7 +1658,7 @@
 				CODE_SIGN_ENTITLEMENTS = Buyme/Buyme.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AZMXQD3636;
 				INFOPLIST_FILE = Buyme/Info.plist;
@@ -1721,7 +1721,7 @@
 				CODE_SIGN_ENTITLEMENTS = Buyme/Buyme.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AZMXQD3636;
 				INFOPLIST_FILE = Buyme/Info.plist;

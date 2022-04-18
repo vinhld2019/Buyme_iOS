@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -285,6 +285,13 @@
                         <constraint firstAttribute="height" constant="60" id="qa0-51-uU1"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb6-ax-0Rv">
+                    <rect key="frame" x="0.0" y="44" width="20" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="pAT-Hg-Cbz"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,7 +299,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xsI-cR-N4Y" secondAttribute="bottom" constant="100" id="87I-qm-QOR"/>
                 <constraint firstItem="JIe-6W-Quc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="D3G-Y7-IVO"/>
                 <constraint firstItem="HPm-uN-VZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FK2-bB-eNk"/>
+                <constraint firstItem="zb6-ax-0Rv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FfZ-dT-lfi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="lbS-Mb-dGj" secondAttribute="top" id="HZw-PN-Qlx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zb6-ax-0Rv" secondAttribute="bottom" id="K3t-Cc-JV9"/>
+                <constraint firstItem="zb6-ax-0Rv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qtk-d6-goZ"/>
                 <constraint firstItem="HPm-uN-VZe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eRI-i9-Z0g"/>
                 <constraint firstAttribute="bottom" secondItem="HPm-uN-VZe" secondAttribute="bottom" id="f1M-Ey-gaR"/>
                 <constraint firstItem="aIU-Yo-0B3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="q1R-xK-Bxy"/>
